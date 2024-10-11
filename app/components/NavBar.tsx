@@ -6,9 +6,6 @@ import {
     SunIcon,
     MoonIcon,
     HomeIcon,
-    InformationCircleIcon,
-    BriefcaseIcon,
-    PhoneIcon,
 } from '@heroicons/react/24/outline';
 
 interface NavLink {
@@ -19,9 +16,6 @@ interface NavLink {
 
 const navigation: NavLink[] = [
     { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
 ];
 
 export default function Navbar() {
@@ -35,7 +29,7 @@ export default function Navbar() {
     return (
         <>
             {/* Mobile Navbar */}
-            <div className="md:hidden bg-gray-100 dark:bg-gray-800 p-1 flex justify-between items-center">
+            <div className="md:hidden fixed inset-y-0 h-auto bg-gray-100 dark:bg-gray-800 flex justify-between items-center">
                 {/* <div className="text-xl font-bold">React Learning Guide</div> */}
                 <button
                     onClick={handleMobileMenuToggle}
@@ -52,7 +46,7 @@ export default function Navbar() {
 
             {/* Sidebar */}
             <div
-                className={`fixed inset-y-0 left-0 transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed inset-y-0 left-0 transform overflow-y-scroll hidden-scrollbar ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
                     } md:translate-x-0 transition-transform duration-200 ease-in-out bg-gray-100 dark:bg-gray-800 w-64 z-50`}
             >
                 <div className="flex flex-col h-full">
@@ -73,13 +67,13 @@ export default function Navbar() {
                     <nav className="flex-1 p-4">
                         <ul>
                             {navigation.map((link) => (
-                                <li key={link.name} className="mb-2">
+                                <li key={link.name} className="mb-1">
                                     <a
                                         href={link.href}
                                         className="flex items-center p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
                                         onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
                                     >
-                                        <link.icon className="h-5 w-5 mr-3" />
+                                        {/* <link.icon className="h-5 w-5 mr-3" /> */}
                                         {link.name}
                                     </a>
                                 </li>

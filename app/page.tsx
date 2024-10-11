@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar";
 import { DarkModeProvider } from "./contexts/DarkModeContext";
 
 export default function Home() {
-
   return (
     <DarkModeProvider>
       <div className="flex">

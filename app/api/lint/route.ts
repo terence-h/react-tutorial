@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { ESLint } from 'eslint';
 import { eslintConfig } from '@/app/utils/eslintConfig';
+import { eslintConfig_js } from '@/app/utils/eslintConfig-js';
 
 interface LintRequestBody {
     code: string;
@@ -27,16 +28,18 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ error: 'Invalid input types.' }, { status: 400 });
         }
 
+        const isTypeScript = language === 'typescript' || language === 'tsx';
+
         // Initialize ESLint
         const eslint = new ESLint({
-            baseConfig: eslintConfig,
+            baseConfig: isTypeScript ? eslintConfig : eslintConfig_js,
             useEslintrc: false, // Prevent ESLint from using external config files
             // Optionally, specify extensions based on language
-            extensions: language === 'typescript' || language === 'tsx' ? ['.ts', '.tsx'] : ['.js', '.jsx'],
+            extensions: isTypeScript ? ['.ts', '.tsx'] : ['.js', '.jsx'],
         });
 
         // Determine file extension based on language
-        const fileExtension = language === 'typescript' || language === 'tsx' ? 'tsx' : 'jsx';
+        const fileExtension = isTypeScript ? 'tsx' : 'jsx';
 
         // Run ESLint
         const results = await eslint.lintText(code, { filePath: `file.${fileExtension}` });

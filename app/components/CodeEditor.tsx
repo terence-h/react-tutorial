@@ -238,7 +238,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                 </select>
                 <button
                     onClick={handleRunCode}
-                    className="bg-blue-500 text-white px-3 py-1 md:px-4 md:py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="bg-blue-500 dark:bg-blue-700 text-white px-3 py-1 md:px-4 md:py-2 rounded hover:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-700"
                 >
                     Run Code
                 </button>
@@ -257,7 +257,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                         {output}
                     </pre>
                 ) : (
-                    <ErrorBoundary><div className='dark:bg-white dark:text-black'>{output}</div></ErrorBoundary>
+                    <ErrorBoundary><div className='border-2 dark:bg-foreground dark:text-background border-black'>{output}</div></ErrorBoundary>
                 )}
             </div>
         </div>

@@ -1,5 +1,5 @@
-// ./app/utils/eslintConfig.ts
-export const eslintConfig = {
+// ./app/utils/eslintConfig-js.ts
+export const eslintConfig_js = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 2020,
@@ -8,10 +8,10 @@ export const eslintConfig = {
             jsx: true,
         },
     },
-    plugins: ['@typescript-eslint', 'react'],
+    plugins: ['react'],
     extends: [
         'eslint:recommended',
-        'plugin:@typescript-eslint/recommended',
+        // 'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
     ],
     env: {
@@ -21,7 +21,7 @@ export const eslintConfig = {
     },
     rules: {
         "react/react-in-jsx-scope": "off",
-        // "react/prop-types": "off"
+        "react/prop-types": "off"
         // semi: ['error', 'always'],
         // quotes: ['error', 'single'],
     },
