@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import {
     Bars3Icon,
@@ -20,6 +20,17 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
     // State to track which categories are expanded
     const [expandedCategories, setExpandedCategories] = useState<Set<number>>(new Set());
 
+    useEffect(() => {
+        const stored = localStorage.getItem('expandedCategories');
+        if (stored) {
+            setExpandedCategories(new Set(JSON.parse(stored)));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('expandedCategories', JSON.stringify(Array.from(expandedCategories)));
+    }, [expandedCategories]);
+
     // Toggle function to expand/collapse categories
     const toggleCategory = (categoryId: number) => {
         setExpandedCategories((prev) => {
@@ -39,7 +50,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
             <div className="fixed flex bottom-0 z-50 left-[48%] md:top-0 md:left-0 h-16 md:px-4">
                 <button
                     onClick={toggleNavbar}
-                    className="text-gray-700 dark:text-gray-300 focus:outline-none"
+                    className="focus:outline-none"
                     aria-label="Toggle Menu"
                 >
                     {isNavbarOpen ? (
@@ -64,7 +75,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                         {/* Close button for mobile */}
                         <button
                             onClick={toggleNavbar}
-                            className="text-gray-700 dark:text-gray-300 focus:outline-none"
+                            className="focus:outline-none"
                             aria-label="Close Menu"
                         >
                             <XMarkIcon className="h-6 w-6" />
@@ -128,7 +139,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                     <div className="p-4">
                         <button
                             onClick={toggleDarkMode}
-                            className="flex items-center w-full p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 rounded focus:outline-none"
+                            className="flex items-center w-full p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded focus:outline-none"
                         >
                             {isDarkMode || isDarkMode === undefined ? (
                                 <>

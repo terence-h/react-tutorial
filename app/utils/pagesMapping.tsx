@@ -1,13 +1,13 @@
 interface SubCategory {
     id: number;
     name: string;
-    link: string; // Optional: URL or route path
+    link: string;
 }
 
 interface Category {
     id: number;
     name: string;
-    subCategories: SubCategory[]; // Optional: Some categories may not have subcategories
+    subCategories: SubCategory[];
 }
 
 const pages: Category[] = [
@@ -23,8 +23,8 @@ const pages: Category[] = [
         id: 2,
         name: "Introduction to TypeScript",
         subCategories: [
-            { id: 21, name: "Key Differences", link: "" },
-            { id: 22, name: "Advantages over JavaScript", link: "" },
+            { id: 21, name: "Key Differences", link: "/content/introduction-to-typescript#keydifferences" },
+            { id: 22, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#advantages" },
         ]
     },
 ];

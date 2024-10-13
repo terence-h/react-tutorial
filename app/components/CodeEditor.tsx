@@ -238,7 +238,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                 </select>
                 <button
                     onClick={handleRunCode}
-                    className="bg-blue-500 dark:bg-blue-700 text-white px-3 py-1 md:px-4 md:py-2 rounded hover:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-700"
+                    className="bg-blue-500 dark:bg-blue-700 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-blue-600 dark:hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-700"
                 >
                     Run Code
                 </button>
