@@ -1,7 +1,7 @@
 "use client";
 
-import CodeEditor from "./components/CodeEditor";
-import NavBar from "./components/NavBar";
+import CodeEditor from "./components/core/CodeEditor";
+import NavBar from "./components/core/NavBar";
 import { DarkModeProvider } from "./contexts/DarkModeContext";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <DarkModeProvider>
       <div className="flex">
         <NavBar />
-        <main className="flex-1 p-5 ml-0 md:ml-64">
+        <main className="flex-1 text-wrap p-5 ml-7 md:ml-64">
           <CodeEditor />
         </main>
       </div>

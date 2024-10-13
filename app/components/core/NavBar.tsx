@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDarkMode } from '../contexts/DarkModeContext';
+import { useDarkMode } from '../../contexts/DarkModeContext';
 import {
     Bars3Icon,
     XMarkIcon,

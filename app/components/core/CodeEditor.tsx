@@ -9,7 +9,7 @@ import { monokai } from '@uiw/codemirror-theme-monokai';
 import { Extension } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
 import debounce from 'lodash/debounce';
-import { executeCode } from '../utils/executeCode';
+import { executeCode } from '../../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
 
 interface CodeEditorProps extends PropsWithChildren {
@@ -203,7 +203,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
     }
 
     return (
-        <div className="p-5">
+        <>
             <div className="flex flex-col md:flex-row items-center space-y-3 md:space-x-4 md:space-y-0 mb-4">
                 <select
                     className="bg-background border border-gray-300 rounded px-2 py-1 md:px-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -260,6 +260,6 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                     <ErrorBoundary><div className='border-2 dark:bg-foreground dark:text-background border-black'>{output}</div></ErrorBoundary>
                 )}
             </div>
-        </div>
+        </>
     );
 }
