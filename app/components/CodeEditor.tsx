@@ -9,7 +9,7 @@ import { monokai } from '@uiw/codemirror-theme-monokai';
 import { Extension } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
 import debounce from 'lodash/debounce';
-import { executeCode } from '../../utils/executeCode';
+import { executeCode } from '../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
 
 interface CodeEditorProps extends PropsWithChildren {
