@@ -9,6 +9,7 @@ export interface TableRow {
 interface TableProps {
     headers: string[];
     data: TableRow[];
+    className?: string
 }
 /**
  * 
@@ -26,11 +27,12 @@ const data: TableRow[] = [
  */
 export default function Table({
     headers,
-    data
+    data,
+    className
 }: TableProps) {
     return (
         <div className="overflow-x-auto">
-            <table className="min-w-full border bg-gray-200 dark:bg-slate-800 border-gray-300 dark:border-slate-500">
+            <table className={`border bg-gray-200 dark:bg-slate-800 border-gray-300 dark:border-slate-500 ${className}`}>
                 {/* Table Header */}
                 <thead>
                     <tr>
@@ -38,7 +40,7 @@ export default function Table({
                             <th
                                 key={index}
                                 scope="col"
-                                className="px-4 py-2 text-left text-sm font-medium border border-gray-300 dark:border-slate-500"
+                                className={`px-4 py-2 text-left border border-gray-300 dark:border-slate-500`}
                             >
                                 {header}
                             </th>
@@ -56,7 +58,7 @@ export default function Table({
                             {headers.map((header, cellIndex) => (
                                 <td
                                     key={cellIndex}
-                                    className="px-4 py-2 text-sm border border-gray-300 dark:border-slate-500"
+                                    className="px-4 py-2 border border-gray-300 dark:border-slate-500"
                                 >
                                     {row[header]}
                                 </td>

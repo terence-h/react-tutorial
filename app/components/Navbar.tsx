@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/24/outline';
 import pages from '../utils/pagesMapping';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 interface NavbarProps {
     isNavbarOpen: boolean;
@@ -16,6 +17,8 @@ interface NavbarProps {
 
 export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
     const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+    const router = useRouter();
 
     // State to track which categories are expanded
     const [expandedCategories, setExpandedCategories] = useState<Set<number>>(new Set());
@@ -47,18 +50,16 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
     return (
         <>
             {/* Mobile Navbar */}
-            <div className="fixed flex bottom-0 z-50 left-[48%] md:top-0 md:left-0 h-16 md:px-4">
-                <button
-                    onClick={toggleNavbar}
-                    className="focus:outline-none"
-                    aria-label="Toggle Menu"
-                >
+            <div className="fixed flex mb-6 md:mb-0 h-10 w-10 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-50 left-[45%] md:top-5 md:left-5 md:px-4"
+                onClick={toggleNavbar}>
+                <div>
                     {isNavbarOpen ? (
                         <XMarkIcon className="h-6 w-6" />
                     ) : (
                         <Bars3Icon className="h-6 w-6" />
                     )}
-                </button>
+                </div>
+
             </div>
 
             {/* Sidebar */}
@@ -90,38 +91,41 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                                     {/* Category Header */}
                                     <div
                                         className="flex justify-between items-center cursor-pointer p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
-                                        onClick={() => toggleCategory(category.id)}
+                                        onClick={category.subCategories ? () => toggleCategory(category.id) : () => router.push(category.link!)}
                                     >
                                         <span>{category.name}</span>
-                                        <span>
-                                            {expandedCategories.has(category.id) ? (
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-4 w-4 transform rotate-180 transition-transform duration-200"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            ) : (
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    className="h-4 w-4 transition-transform duration-200"
-                                                    fill="none"
-                                                    viewBox="0 0 24 24"
-                                                    stroke="currentColor"
-                                                >
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            )}
-                                        </span>
+                                        {category.subCategories &&
+                                            <span>
+                                                {expandedCategories.has(category.id) ? (
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="h-4 w-4 transform rotate-180 transition-transform duration-200"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                    >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                ) : (
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="h-4 w-4 transition-transform duration-200"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor"
+                                                    >
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                    </svg>
+                                                )}
+                                            </span>
+                                        }
+
                                     </div>
 
                                     {/* Subcategories */}
                                     {expandedCategories.has(category.id) && (
                                         <ul className="mt-1 ml-4">
-                                            {category.subCategories.map((sub) => (
+                                            {category.subCategories!.map((sub) => (
                                                 <li key={sub.id} className="mb-1">
                                                     <Link href={sub.link || '#'} className="block p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded">
                                                         {sub.name}
@@ -153,6 +157,10 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                                 </>
                             )}
                         </button>
+                    </div>
+                    {/* Version No. */}
+                    <div className="pb-2 pr-2 text-end text-xs">
+                        Version 1.0.0
                     </div>
                 </div>
             </div>

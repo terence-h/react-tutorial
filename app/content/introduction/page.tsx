@@ -1,11 +1,20 @@
+import Section from "@/app/components/Section";
 import LearningOutcomes from "./LearningOutcomes";
 import LearningPlan from "./LearningPlan";
+import Prerequisites from "./Prerequisites";
+import Pagination from "@/app/components/Pagination";
 
 export default function Page() {
     return (
-        <section id="introduction">
+        <Section id="introduction">
             <LearningOutcomes />
             <LearningPlan />
-        </section>
+            <Prerequisites />
+            <Pagination
+                previousLabel="Home"
+                previousPath="/"
+                nextPath="/content/introduction-to-typescript"
+                nextLabel="Introduction to TypeScript" />
+        </Section>
     );
 }
