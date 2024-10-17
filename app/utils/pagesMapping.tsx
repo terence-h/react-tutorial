@@ -33,6 +33,9 @@ const pages: Category[] = [
             { id: 31, name: "What is TypeScript?", link: "/content/introduction-to-typescript#ts-introduction" },
             { id: 32, name: "Key Differences", link: "/content/introduction-to-typescript#ts-key-differences" },
             { id: 33, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
+            { id: 34, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
+            { id: 35, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
+            { id: 36, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
         ]
     },
 ];
