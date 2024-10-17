@@ -48,18 +48,16 @@ interface LintResponse {
  * <CodeEditor 
  *    languages={["javascript", "typescript", "jsx", "tsx"]}
  *    initialCode="console.log('hello');"
- *    themeOpt="dracula"
  * />
  * 
 
  */
-export default function CodeEditor({ languages, initialCode }: CodeEditorProps) { // , themeOpt = 'vscode-dark'
+export default function CodeEditor({ languages, initialCode }: CodeEditorProps) {
     const [code, setCode] = useState<string>(initialCode ?? '// Write your code here');
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
-    // const [theme, setTheme] = useState<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>(themeOpt);
     const [theme, setTheme] = useLocalStorage<string>('codeTheme', 'vs-dark');
 
     function handleSetTheme(theme: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai') {

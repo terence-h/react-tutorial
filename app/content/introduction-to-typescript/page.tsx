@@ -13,7 +13,7 @@ export default function Page() {
             <TSAdvantagesPage /> 
             <Pagination
                 previousLabel="Introduction"
-                previousPath="/introduction"
+                previousPath="/content/introduction"
                 nextPath="/content/setting-up"
                 nextLabel="Setting Up Tools and React Project Environment" />
         </Section>

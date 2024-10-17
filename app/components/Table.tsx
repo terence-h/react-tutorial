@@ -10,6 +10,8 @@ interface TableProps {
     headers: string[];
     data: TableRow[];
     className?: string
+    border?: boolean;
+    fill?: boolean;
 }
 /**
  * 
@@ -28,11 +30,13 @@ const data: TableRow[] = [
 export default function Table({
     headers,
     data,
-    className
+    className,
+    border = true,
+    fill = true
 }: TableProps) {
     return (
         <div className="overflow-x-auto">
-            <table className={`min-w-[90%] mx-auto border bg-gray-200 dark:bg-slate-800 border-gray-300 dark:border-slate-500 ${className || ''}`}>
+            <table className={`w-full table-auto md:min-w-[90%] md:max-w-[90%] mx-auto ${border ? 'border border-gray-300 dark:border-slate-500' : ''} ${fill ? 'bg-gray-200 dark:bg-slate-800' : ''} ${className || ''}`}>
                 {/* Table Header */}
                 <thead>
                     <tr>
@@ -40,7 +44,7 @@ export default function Table({
                             <th
                                 key={index}
                                 scope="col"
-                                className={`px-4 py-2 text-left border border-gray-300 dark:border-slate-500`}
+                                className={`px-4 py-2 text-left break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
                             >
                                 {header}
                             </th>
@@ -53,12 +57,12 @@ export default function Table({
                     {data.map((row, rowIndex) => (
                         <tr
                             key={rowIndex}
-                            className={`bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600`}
+                            className={`${fill ? 'bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600' : ''}`}
                         >
                             {headers.map((header, cellIndex) => (
                                 <td
                                     key={cellIndex}
-                                    className="px-4 py-2 border border-gray-300 dark:border-slate-500"
+                                    className={`px-4 py-2 break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
                                 >
                                     {row[header]}
                                 </td>

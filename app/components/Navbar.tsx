@@ -50,7 +50,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
     return (
         <>
             {/* Mobile Navbar */}
-            <div className="fixed flex mb-6 md:mb-0 h-10 w-10 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-50 left-[45%] md:top-5 md:left-5 md:px-4"
+            <div className="fixed flex mb-6 md:mb-0 h-10 w-10 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-[49] left-[45%] md:top-5 md:left-5 md:px-4"
                 onClick={toggleNavbar}>
                 <div>
                     {isNavbarOpen ? (
@@ -65,7 +65,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
             {/* Sidebar */}
             <div
                 className={`fixed inset-y-0 left-0 transform overflow-y-scroll hidden-scrollbar ${isNavbarOpen ? 'translate-x-0' : '-translate-x-full'
-                    } transition-transform duration-200 ease-in-out bg-gray-100 dark:bg-gray-800 w-96 z-50`}
+                    } transition-transform duration-200 ease-in-out bg-gray-100 dark:bg-gray-800 w-96 z-[49]`}
             >
                 <div className="flex flex-col h-full">
                     {/* Navbar Header */}
@@ -168,7 +168,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
             {/* Overlay for Mobile Menu */}
             {isNavbarOpen && (
                 <div
-                    className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
+                    className="fixed inset-0 bg-black opacity-50 z-[49] md:hidden"
                     onClick={toggleNavbar}
                     aria-label="Close Menu Overlay"
                 ></div>

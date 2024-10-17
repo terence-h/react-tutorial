@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import LoaderWrapper from "./LoaderWrapper";
 
 interface SectionProps extends PropsWithChildren {
     id: string;
@@ -7,8 +8,10 @@ interface SectionProps extends PropsWithChildren {
 
 export default function Section({ children, id, className }: SectionProps) {
     return (
-        <section id={id} className={`mb-12 md:mb-0 ${className}`}>
-            {children}
-        </section>
+        <LoaderWrapper>
+            <section id={id} className={`mb-12 md:mb-0 ${className}`}>
+                {children}
+            </section>
+        </LoaderWrapper>
     );
 }
