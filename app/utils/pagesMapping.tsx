@@ -21,17 +21,18 @@ const pages: Category[] = [
         id: 2,
         name: "Introduction",
         subCategories: [
-            { id: 11, name: "Learning Outcomes", link: "/content/introduction#learning-outcomes" },
-            { id: 12, name: "Learning Plan", link: "/content/introduction#learning-plan" },
-            { id: 13, name: "Pre-Requisites", link: "/content/introduction#prerequisites" },
+            { id: 21, name: "Learning Outcomes", link: "/content/introduction#learning-outcomes" },
+            { id: 22, name: "Learning Plan", link: "/content/introduction#learning-plan" },
+            { id: 23, name: "Pre-Requisites", link: "/content/introduction#prerequisites" },
         ]
     },
     {
         id: 3,
         name: "Introduction to TypeScript",
         subCategories: [
-            { id: 21, name: "Key Differences", link: "/content/introduction-to-typescript#keydifferences" },
-            { id: 22, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#advantages" },
+            { id: 31, name: "What is TypeScript?", link: "/content/introduction-to-typescript#ts-introduction" },
+            { id: 32, name: "Key Differences", link: "/content/introduction-to-typescript#ts-key-differences" },
+            { id: 33, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
         ]
     },
 ];

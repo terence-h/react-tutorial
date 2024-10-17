@@ -32,7 +32,7 @@ export default function Table({
 }: TableProps) {
     return (
         <div className="overflow-x-auto">
-            <table className={`border bg-gray-200 dark:bg-slate-800 border-gray-300 dark:border-slate-500 ${className}`}>
+            <table className={`min-w-[90%] mx-auto border bg-gray-200 dark:bg-slate-800 border-gray-300 dark:border-slate-500 ${className || ''}`}>
                 {/* Table Header */}
                 <thead>
                     <tr>

@@ -1,16 +1,11 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-/**
- * Defines the shape of the DarkMode context.
- */
+
 interface DarkModeContextProps {
     isDarkMode?: boolean;
     toggleDarkMode: () => void;
 }
 
-/**
- * Creates a Context for dark mode with default values.
- */
 const DarkModeContext = createContext<DarkModeContextProps | undefined>(undefined);
 
 /**
@@ -27,9 +22,6 @@ export const useDarkMode = (): DarkModeContextProps => {
     return context;
 };
 
-/**
- * Props for the DarkModeProvider component.
- */
 interface DarkModeProviderProps {
     children: ReactNode;
 }
@@ -51,9 +43,6 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
     // });
     const [isDarkMode, setDarkMode] = useState<boolean | undefined>(undefined);
 
-    /**
-     * Effect to add or remove the 'dark' class from the document body based on isDarkMode.
-     */
     useEffect(() => {
         if (isDarkMode) {
             document.body.classList.add('dark');
@@ -62,9 +51,6 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
         }
     }, [isDarkMode]);
 
-    /**
-     * Effect to synchronize the dark mode state with localStorage on mount.
-     */
     useEffect(() => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
@@ -76,9 +62,6 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
         }
     }, []);
 
-    /**
-     * Toggles the dark mode state and updates localStorage accordingly.
-     */
     const toggleDarkMode = () => {
         setDarkMode((prevMode) => {
             const newMode = !prevMode;
@@ -91,6 +74,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
             return newMode;
         });
     };
+    
     return (
         <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
             {isDarkMode !== undefined && children}

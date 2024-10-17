@@ -11,11 +11,11 @@ import { linter, Diagnostic } from '@codemirror/lint';
 import debounce from 'lodash/debounce';
 import { executeCode } from '../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
+import { useLocalStorage } from '../contexts/LocalStorageContext';
 
 interface CodeEditorProps extends PropsWithChildren {
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
     initialCode?: string;
-    themeOpt?: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
 }
 
 interface LintMessage {
@@ -53,13 +53,18 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-dark' }: CodeEditorProps) {
+export default function CodeEditor({ languages, initialCode }: CodeEditorProps) { // , themeOpt = 'vscode-dark'
     const [code, setCode] = useState<string>(initialCode ?? '// Write your code here');
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
-    const [theme, setTheme] = useState<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>(themeOpt);
+    // const [theme, setTheme] = useState<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>(themeOpt);
+    const { storedValue, setValue } = useLocalStorage<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>()
+
+    function handleSetTheme(theme: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai') {
+        setValue(theme)
+    }
 
     // Use useRef to store the debounced function
     const debouncedLintCode = useRef(debounce(lintCode, 500)).current;
@@ -173,7 +178,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
 
     // Function to get the theme extension
     function getThemeExtension() {
-        switch (theme) {
+        switch (storedValue) {
             case 'vscode-dark':
                 return vscodeDark;
             case 'vscode-light':
@@ -226,9 +231,10 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                 </select>
                 <select
                     className="bg-background border border-gray-300 rounded px-2 py-1 md:px-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={theme}
+                    value={storedValue as string ?? 'vscode-dark'}
                     onChange={(e) =>
-                        setTheme(e.target.value as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai')
+                        // setTheme(e.target.value as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai')
+                        handleSetTheme(e.target.value as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai')
                     }
                 >
                     <option value="vscode-dark">VSCode Dark</option>
@@ -242,7 +248,7 @@ export default function CodeEditor({ languages, initialCode, themeOpt = 'vscode-
                 >
                     Run Code
                 </button>
-            </div>
+            </div >
             <CodeMirror
                 value={code}
                 height="400px"
