@@ -40,7 +40,7 @@ interface LintResponse {
  * 
  * @param languages - Optional array of supported languages. Defaults to all if not provided.
  * @param initialCode - Optional initial code to be displayed in the editor.
- * @param height - Optional height for the code editor. Defaults to 400px.
+ * @param height - Optional height for the code editor. Defaults to auto
  * @returns The rendered code editor component.
  * 
  * @example
@@ -54,8 +54,8 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ languages, initialCode, height = "400px" }: CodeEditorProps) {
-    const [code, setCode] = useState<string>(initialCode ?? '// Write your code here');
+export default function CodeEditor({ languages, initialCode, height = "auto" }: CodeEditorProps) {
+    const [code, setCode] = useState<string>(initialCode ?? "// Write your code here\nconsole.log('Hello, World!');");
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
