@@ -168,7 +168,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
             {/* Overlay for Mobile Menu */}
             {isNavbarOpen && (
                 <div
-                    className="fixed inset-0 bg-black opacity-50 z-[49] md:hidden"
+                    className="fixed inset-0 bg-black/75 z-[48] md:hidden"
                     onClick={toggleNavbar}
                     aria-label="Close Menu Overlay"
                 ></div>

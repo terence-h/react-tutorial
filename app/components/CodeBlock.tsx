@@ -9,6 +9,7 @@ interface CodeBlockProps {
     code: string;
     language: string;
     showLineNumbers?: boolean
+    className?: string
 }
 /**
  * 
@@ -19,7 +20,7 @@ interface CodeBlockProps {
  * @example
  * <CodeBlock code={"console.log('abc')"} language={"javascript"} />
  */
-export default function CodeBlock({ code, language, showLineNumbers = true }: CodeBlockProps) {
+export default function CodeBlock({ code, language, showLineNumbers = true, className }: CodeBlockProps) {
     const [theme] = useLocalStorage<string>('codeTheme', 'vs-dark');
 
     function getThemeExtension() {
@@ -39,7 +40,7 @@ export default function CodeBlock({ code, language, showLineNumbers = true }: Co
 
     return (
         // dark:bg-slate-700 rounded-lg p-3
-        <div className="w-full overflow-x-auto">
+        <div className={`w-full overflow-x-auto ${className}`}>
             <SyntaxHighlighter
                 language={language}
                 style={getThemeExtension()}

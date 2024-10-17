@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, PropsWithChildren } from 'react';
-import CodeMirror from '@uiw/react-codemirror';
+import CodeMirror, { EditorView } from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { vscodeDark, vscodeLight } from '@uiw/codemirror-theme-vscode';
 import { dracula } from '@uiw/codemirror-theme-dracula';
@@ -16,6 +16,7 @@ import useLocalStorage from '../hooks/useLocalStorage';
 interface CodeEditorProps extends PropsWithChildren {
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
     initialCode?: string;
+    height?: string;
 }
 
 interface LintMessage {
@@ -38,7 +39,7 @@ interface LintResponse {
  * 
  * @param languages - Optional array of supported languages. Defaults to all if not provided.
  * @param initialCode - Optional initial code to be displayed in the editor.
- * @param themeOpt - Optional theme for the editor; defaults to 'vscode-dark' if not provided.
+ * @param height - Optional height for the code editor. Defaults to 400px.
  * @returns The rendered code editor component.
  * 
  * @example
@@ -52,7 +53,7 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ languages, initialCode }: CodeEditorProps) {
+export default function CodeEditor({ languages, initialCode, height = "400px" }: CodeEditorProps) {
     const [code, setCode] = useState<string>(initialCode ?? '// Write your code here');
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
@@ -78,6 +79,7 @@ export default function CodeEditor({ languages, initialCode }: CodeEditorProps) 
 
         setExtensions([
             languageExtension,
+            EditorView.lineWrapping,
             linter(() => diagnostics),
             // Add other extensions like autocompletion if needed
         ]);
@@ -249,7 +251,7 @@ export default function CodeEditor({ languages, initialCode }: CodeEditorProps) 
             </div >
             <CodeMirror
                 value={code}
-                height="400px"
+                height={height}
                 extensions={extensions}
                 theme={getThemeExtension()}
                 onChange={setCode}

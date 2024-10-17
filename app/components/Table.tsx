@@ -44,7 +44,7 @@ export default function Table({
                             <th
                                 key={index}
                                 scope="col"
-                                className={`px-4 py-2 text-left break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
+                                className={`px-2 py-1 md:px-4 md:py-2 text-left break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
                             >
                                 {header}
                             </th>
@@ -62,7 +62,7 @@ export default function Table({
                             {headers.map((header, cellIndex) => (
                                 <td
                                     key={cellIndex}
-                                    className={`px-4 py-2 break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
+                                    className={`px-2 py-1 md:px-4 md:py-2 break-words ${border ? 'border border-gray-300 dark:border-slate-500' : ''}`}
                                 >
                                     {row[header]}
                                 </td>
