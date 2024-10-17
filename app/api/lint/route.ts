@@ -1,11 +1,9 @@
 // ./app/api/lint/route.ts
-import 'eslint-plugin-react'; // Explicitly import to ensure bundling
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { ESLint } from 'eslint';
 import { eslintConfig } from '@/app/utils/eslintConfig';
 import { eslintConfig_js } from '@/app/utils/eslintConfig-js';
-import path from 'path';
 
 interface LintRequestBody {
     code: string;
@@ -38,7 +36,6 @@ export async function POST(request: NextRequest) {
             useEslintrc: false, // Prevent ESLint from using external config files
             // Optionally, specify extensions based on language
             extensions: isTypeScript ? ['.ts', '.tsx'] : ['.js', '.jsx'],
-            resolvePluginsRelativeTo: path.resolve('./'), // Ensure plugins are resolved from project root
         });
 
         // Determine file extension based on language
