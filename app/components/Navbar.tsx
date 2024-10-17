@@ -175,4 +175,4 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
             )}
         </>
     );
-};
+}

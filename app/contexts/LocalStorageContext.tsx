@@ -16,7 +16,7 @@ export const useLocalStorage = () => {
     return context;
 };
 
-export const LocalStorageProvider: React.FC<PropsWithChildren> = ({ children }) => {
+export const LocalStorageProvider: React.FC<PropsWithChildren> = ({ children }: PropsWithChildren) => {
     const [storageState, setStorageState] = useState<{ [key: string]: unknown }>({});
 
     useEffect(() => {

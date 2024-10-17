@@ -27,7 +27,7 @@ function getPadddingLeft(level: number) {
         default:
             return 'ps-24';
     }
-};
+}
 /**
  * 
  * @example
@@ -135,4 +135,4 @@ export default function NestedList({ items, level = 1 }: NestedListProps) {
             ))}
         </ul>
     );
-};
+}

@@ -44,7 +44,7 @@ function preprocessCode(code: string): { transformedCode: string; exportedCompon
     }
 
     return { transformedCode: code, exportedComponentName };
-};
+}
 
 export function executeCode(code: string, language: string): ExecutionResult {
     try {
@@ -120,4 +120,4 @@ export function executeCode(code: string, language: string): ExecutionResult {
     // catch (error: any) {
     //     return { error: error.message };
     // }
-};
+}

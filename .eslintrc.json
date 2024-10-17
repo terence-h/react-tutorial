@@ -1,4 +1,19 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
-  "plugins": ["@typescript-eslint", "react"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+    // "react/prop-types": "off"
+    // semi: ['error', 'always'],
+    // quotes: ['error', 'single'],
+  }
 }

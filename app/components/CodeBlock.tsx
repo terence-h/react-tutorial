@@ -37,7 +37,7 @@ export default function CodeBlock({ code, language, showLineNumbers = true, clas
             default:
                 return vscDarkPlus;
         }
-    };
+    }
 
     return (
         // dark:bg-slate-700 rounded-lg p-3
@@ -58,7 +58,7 @@ export default function CodeBlock({ code, language, showLineNumbers = true, clas
             </SyntaxHighlighter>
         </div>
     );
-};
+}
 /* LIST OF AVAILABLE LANGUAGE FOR SYNTAX HIGHLIGHTER
 abap
 abnf
