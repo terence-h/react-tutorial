@@ -12,7 +12,7 @@ import tsAdvAutoCompletion1 from '../../../public/content/introduction-to-typesc
 
 export default function TSAdvantagesPage() {
     return (
-        <article id="ts-advantages">
+        <article id="advantages">
             <Header>Advantages of TypeScript</Header>
 
             <Header level={2}>1. Static Typing, Type Inference, and Compile Time Error Detection</Header>

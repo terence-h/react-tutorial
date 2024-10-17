@@ -30,12 +30,12 @@ const pages: Category[] = [
         id: 3,
         name: "Introduction to TypeScript",
         subCategories: [
-            { id: 31, name: "What is TypeScript?", link: "/content/introduction-to-typescript#ts-introduction" },
-            { id: 32, name: "Key Differences", link: "/content/introduction-to-typescript#ts-key-differences" },
-            { id: 33, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
-            { id: 34, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
-            { id: 35, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
-            { id: 36, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#ts-advantages" },
+            { id: 31, name: "What is TypeScript?", link: "/content/introduction-to-typescript#introduction" },
+            { id: 32, name: "Key Differences", link: "/content/introduction-to-typescript#key-differences" },
+            { id: 33, name: "Advantages over JavaScript", link: "/content/introduction-to-typescript#advantages" },
+            { id: 34, name: "When to use JavaScript or TypeScript", link: "/content/introduction-to-typescript#when-to-use" },
+            { id: 35, name: "Learn More", link: "/content/introduction-to-typescript#learn-more" },
+            { id: 36, name: "Practice: Writing TypeScript", link: "/content/introduction-to-typescript#practice" },
         ]
     },
 ];

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus, vs, dracula, xonokai } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import useLocalStorage from '../hooks/useLocalStorage';
+import { useLocalStorage } from '../contexts/LocalStorageContext';
 
 interface CodeBlockProps {
     code: string;
@@ -21,7 +21,8 @@ interface CodeBlockProps {
  * <CodeBlock code={"console.log('abc')"} language={"javascript"} />
  */
 export default function CodeBlock({ code, language, showLineNumbers = true, className }: CodeBlockProps) {
-    const [theme] = useLocalStorage<string>('codeTheme', 'vs-dark');
+    const { getItem } = useLocalStorage();
+    const theme = getItem('codeTheme') as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
 
     function getThemeExtension() {
         switch (theme) {

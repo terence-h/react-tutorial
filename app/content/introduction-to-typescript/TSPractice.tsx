@@ -4,7 +4,7 @@ import Paragraph from "@/app/components/Paragraph";
 
 export default function TSPractice() {
     return (
-        <>
+        <article id="practice">
             <Header level={2}>Practice: Writing TypeScript</Header>
             <Paragraph>You are given 5 piece of JavaScript codes snippets and asked to convert to TypeScript.{<br />}Note: If you are an offline editor like VSCode, the file extension for TypeScript is .ts.</Paragraph>
 
@@ -27,7 +27,7 @@ export default function TSPractice() {
             <Header level={3}>Challenge 5</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by typing the parameters and making the second parameter optional. Hint: Ask ChatGPT or Google if you can&apos;t figure it out.</Paragraph>
             <CodeEditor height="300px" initialCode={challengeFiveInitial} languages={['typescript']} />
-        </>
+        </article>
     );
 }
 

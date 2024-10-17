@@ -3,7 +3,7 @@ import Table, { TableRow } from "@/app/components/Table";
 
 export default function TSKeyDifferencesPage() {
     return (
-        <article id="ts-key-differences">
+        <article id="key-differences">
             <Header>Key Differences between JavaScript and TypeScript</Header>
             <Table headers={headers} data={data} />
         </article>

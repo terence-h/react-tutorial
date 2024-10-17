@@ -11,7 +11,8 @@ import { linter, Diagnostic } from '@codemirror/lint';
 import debounce from 'lodash/debounce';
 import { executeCode } from '../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
-import useLocalStorage from '../hooks/useLocalStorage';
+import { useLocalStorage } from '../contexts/LocalStorageContext';
+// import useLocalStorage from '../hooks/useLocalStorage';
 
 interface CodeEditorProps extends PropsWithChildren {
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
@@ -59,10 +60,13 @@ export default function CodeEditor({ languages, initialCode, height = "400px" }:
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
-    const [theme, setTheme] = useLocalStorage<string>('codeTheme', 'vs-dark');
+    // const [theme, setTheme] = useLocalStorage<string>('codeTheme', 'vs-dark');
+
+    const { getItem, setItem } = useLocalStorage();
+    const theme = getItem('codeTheme') as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
 
     function handleSetTheme(theme: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai') {
-        setTheme(theme)
+        setItem('codeTheme', theme);
     }
 
     // Use useRef to store the debounced function
