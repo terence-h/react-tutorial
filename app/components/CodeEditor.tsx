@@ -100,7 +100,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
         } else {
             setOutput('No output');
         }
-    };
+    }
 
     // Function to determine the appropriate language extension
     function getLanguageExtension(language: string): Extension {
@@ -116,7 +116,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
             default:
                 return javascript();
         }
-    };
+    }
 
     // Helper function to calculate character offset based on line and column
     function getCharacterOffset(code: string, line: number, column: number): number {
@@ -126,7 +126,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
             offset += lines[i].length + 1; // +1 for the newline character
         }
         return offset + (column - 1);
-    };
+    }
 
     // Function to perform linting
     async function lintCode(code: string, language: string) {
@@ -178,7 +178,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
             console.error('Linting error:', error);
             setDiagnostics([]);
         }
-    };
+    }
 
     // Function to get the theme extension
     function getThemeExtension() {
@@ -194,7 +194,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
             default:
                 return vscodeDark;
         }
-    };
+    }
 
     function getLanguageName(lang: string): string {
         switch (lang) {
