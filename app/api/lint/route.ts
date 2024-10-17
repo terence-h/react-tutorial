@@ -1,4 +1,5 @@
 // ./app/api/lint/route.ts
+import 'eslint-plugin-react'; // Ensure the plugin is bundled
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { ESLint } from 'eslint';
