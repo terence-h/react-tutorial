@@ -11,7 +11,7 @@ import { linter, Diagnostic } from '@codemirror/lint';
 import debounce from 'lodash/debounce';
 import { executeCode } from '../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
-import { useLocalStorage } from '../contexts/LocalStorageContext';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 interface CodeEditorProps extends PropsWithChildren {
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
@@ -60,10 +60,10 @@ export default function CodeEditor({ languages, initialCode }: CodeEditorProps) 
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
     // const [theme, setTheme] = useState<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>(themeOpt);
-    const { storedValue, setValue } = useLocalStorage<'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai'>()
+    const [theme, setTheme] = useLocalStorage<string>('codeTheme', 'vs-dark');
 
     function handleSetTheme(theme: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai') {
-        setValue(theme)
+        setTheme(theme)
     }
 
     // Use useRef to store the debounced function
@@ -178,7 +178,7 @@ export default function CodeEditor({ languages, initialCode }: CodeEditorProps) 
 
     // Function to get the theme extension
     function getThemeExtension() {
-        switch (storedValue) {
+        switch (theme) {
             case 'vscode-dark':
                 return vscodeDark;
             case 'vscode-light':
@@ -231,7 +231,7 @@ export default function CodeEditor({ languages, initialCode }: CodeEditorProps) 
                 </select>
                 <select
                     className="bg-background border border-gray-300 rounded px-2 py-1 md:px-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={storedValue as string ?? 'vscode-dark'}
+                    value={theme ?? 'vscode-dark'}
                     onChange={(e) =>
                         // setTheme(e.target.value as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai')
                         handleSetTheme(e.target.value as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai')
