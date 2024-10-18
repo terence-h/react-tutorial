@@ -70,7 +70,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
     }
 
     // Use useRef to store the debounced function
-    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+    // if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         const debouncedLintCode = useRef(debounce(lintCode, 500)).current;
 
@@ -79,7 +79,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
         useEffect(() => {
             debouncedLintCode(code, language);
         }, [code, language, debouncedLintCode]);
-    }
+    // }
 
     // Effect to set up language and theme extensions
     useEffect(() => {
