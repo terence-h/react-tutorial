@@ -122,7 +122,7 @@ export default function NestedList({ items, level = 1 }: NestedListProps) {
     const paddingLeftClass = getPadddingLeft(level);
 
     return (
-        <ul className={`list-disc ${paddingLeftClass} space-y-2`}>
+        <ul className={`list-disc ${paddingLeftClass} space-y-1`}>
             {items.map((item) => (
                 <li key={item.id}>
                     <span className={`${item.className || ''}`}>

@@ -13,7 +13,7 @@ export default function Page() {
             <Pagination
                 previousLabel="Home"
                 previousPath="/"
-                nextPath="/content/introduction-to-typescript"
+                nextPath="/tutorials/introduction-to-typescript"
                 nextLabel="Introduction to TypeScript" />
         </Section>
     );

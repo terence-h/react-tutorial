@@ -6,7 +6,9 @@ export default function TSPractice() {
     return (
         <article id="practice">
             <Header level={2}>Practice: Writing TypeScript</Header>
-            <Paragraph>You are given 5 piece of JavaScript codes snippets and asked to convert to TypeScript.{<br />}Note: If you are an offline editor like VSCode, the file extension for TypeScript is .ts.</Paragraph>
+            <Paragraph>You are given 5 piece of JavaScript codes snippets and asked to convert to TypeScript.
+                {<br />}Note: If you are an offline editor like VSCode, the file extension for TypeScript is .ts.
+            </Paragraph>
 
             <Header level={3}>Challenge 1</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying the proper type for the parameter and return value.</Paragraph>

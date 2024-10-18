@@ -38,6 +38,22 @@ const pages: Category[] = [
             { id: 36, name: "Practice: Writing TypeScript", link: "/tutorials/introduction-to-typescript#practice" },
         ]
     },
+    {
+        id: 4,
+        name: "Setting Up Tools and React Project Environments",
+        subCategories: [
+            { id: 41, name: "Download Tools", link: "/tutorials/setting-up#download-tools" },
+            { id: 42, name: "Setting Up NVM", link: "/tutorials/setting-up#setting-up-nvm" },
+            { id: 43, name: "Create your first React App", link: "/tutorials/setting-up#create-react-app" },
+        ]
+    },
+    {
+        id: 5,
+        name: "Setting Up Tools and React Project Environments",
+        subCategories: [
+            { id: 51, name: "Temp", link: "/tutorials/starting-with-react" },
+        ]
+    },
 ];
 
 export default pages;
