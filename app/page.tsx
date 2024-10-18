@@ -12,7 +12,7 @@ export default function Home() {
       <Paragraph>Here&apos;s a code editor for you to have fun writing JavaScript, TypeScript and React in either JSX or TSX!</Paragraph>
       <CodeEditor />
       <Pagination
-        nextPath="/content/introduction"
+        nextPath="/tutorials/introduction"
         nextLabel="Introduction" />
     </LoaderWrapper>
 
