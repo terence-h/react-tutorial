@@ -4,7 +4,7 @@ import LayoutWrapper from "./components/LayoutWrapper";
 
 export const metadata: Metadata = {
   title: "React Learning Guide",
-  description: "WIP",
+  description: "Developed and Curated by Terence Hau",
 };
 
 export default function RootLayout({

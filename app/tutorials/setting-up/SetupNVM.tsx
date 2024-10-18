@@ -12,12 +12,12 @@ export default function SetupNVM() {
             <Paragraph>DO NOT follow this if you are using Node.js.
                 <br />Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.
             </Paragraph>
-            <Paragraph className="mb-0 underline">To install Node.js via NVM (Use LTS for this tutorial):</Paragraph>
+            <Paragraph className="underline" marginBottom={0}>To install Node.js via NVM (Use LTS for this tutorial):</Paragraph>
             <NestedList items={nvmInstallCommands} />
             <ImageContainer src={nvmInstallLts} className="mt-2 w-full md:w-1/2" alt={"nvm install lts"} />
-            <Paragraph className="mt-5">Once you installed the LTS version, type &quot;nvm use lts&quot; or &quot;nvm use [version]&quot; to set the default Node.js version to use.</Paragraph>
+            <Paragraph marginTop={5}>Once you installed the LTS version, type &quot;nvm use lts&quot; or &quot;nvm use [version]&quot; to set the default Node.js version to use.</Paragraph>
             <ImageContainer src={nvmUseLts} className="mt-2 w-full md:w-1/2" alt={"nvm use lts"} />
-            <Paragraph className="mt-5 mb-0 underline">Useful commands to check/change Node.js versions</Paragraph>
+            <Paragraph className="underline" marginTop={5} marginBottom={0}>Useful commands to check/change Node.js versions</Paragraph>
             <NestedList items={nvmUsefulCommands} />
         </article>
     );

@@ -49,9 +49,13 @@ const pages: Category[] = [
     },
     {
         id: 5,
-        name: "Setting Up Tools and React Project Environments",
+        name: "Starting with React",
         subCategories: [
-            { id: 51, name: "Temp", link: "/tutorials/starting-with-react" },
+            { id: 51, name: "Break Everything Down into Components", link: "/tutorials/starting-with-react#key-pointer-one" },
+            { id: 52, name: `Components "Talk" to Each Other with Props`, link: "/tutorials/starting-with-react#key-pointer-two" },
+            { id: 53, name: "Managing State for Dynamic Data", link: "/tutorials/starting-with-react#key-pointer-three" },
+            { id: 54, name: "Think About Reusability", link: "/tutorials/starting-with-react#key-pointer-four" },
+            { id: 55, name: "Let React Handle the UI Updates", link: "/tutorials/starting-with-react#key-pointer-five" },
         ]
     },
 ];

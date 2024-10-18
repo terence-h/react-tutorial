@@ -52,7 +52,8 @@ export default function CodeBlock({ code, language, showLineNumbers = true, clas
                     fontSize: '1rem', // Tailwind's text-base
                 }}
                 showLineNumbers={showLineNumbers}
-                wrapLines
+                wrapLines={true}
+                wrapLongLines={true}
             >
                 {code}
             </SyntaxHighlighter>

@@ -30,7 +30,7 @@ export default function Page() {
 const references = [
     {
         id: 1,
-        label: (<Hyperlink href="https://www.youtube.com/watch?v=ahCwqrYpIuM">TypeScript – The Basics by Fireship</Hyperlink>)
+        label: (<Hyperlink href="https://www.youtube.com/watch?v=ahCwqrYpIuM">TypeScript - The Basics by Fireship</Hyperlink>)
     },
     {
         id: 2,

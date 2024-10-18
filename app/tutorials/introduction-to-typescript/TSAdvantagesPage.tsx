@@ -24,7 +24,7 @@ export default function TSAdvantagesPage() {
                 <div className="md:hidden">TypeScript</div>
                 <ImageContainer src={tsAdvStaticType1} className={`md:w-[45%] mx-auto`} alt='Code' />
             </div>
-            <Paragraph className="mt-5">Here&apos;s another example but with function parameters this time. Notice the &quot;: number&quot; and &quot;: string&quot; beside the parameters/variables? TypeScript supports static typing which allows you to assign a type. Similarly, the TypeScript version highlights an error in red underline. The Add function is expecting 2 number parameters but received 1 number and 1 string.</Paragraph>
+            <Paragraph marginTop={5}>Here&apos;s another example but with function parameters this time. Notice the &quot;: number&quot; and &quot;: string&quot; beside the parameters/variables? TypeScript supports static typing which allows you to assign a type. Similarly, the TypeScript version highlights an error in red underline. The Add function is expecting 2 number parameters but received 1 number and 1 string.</Paragraph>
             <div className="mx-auto md:max-w-[90%] flex flex-col md:flex-row gap-y-2 md:gap-y-0">
                 <div className="md:hidden">JavaScript</div>
                 <ImageContainer src={jsAdvStaticTypeFunc1} className={`md:w-[45%] mx-auto`} alt='Code' />
@@ -38,7 +38,7 @@ export default function TSAdvantagesPage() {
                 <ImageContainer src={tsAdvInterface1} className={`md:w-[45%] mx-auto`} alt='Code' />
                 <ImageContainer src={tsAdvInterface2} className={`md:w-[45%] mx-auto`} alt='Code' />
             </div>
-            <Paragraph className="mt-5">Another advantage of interfaces is to provide autocompletion. Assuming this is the JSON response you receive from your backend API.
+            <Paragraph marginTop={5}>Another advantage of interfaces is to provide autocompletion. Assuming this is the JSON response you receive from your backend API.
                 <br />Auto completion is much more powerful in TypeScript as shown below because &quot;persons&quot; is initialised as the array type of Person interface.
             </Paragraph>
             <div className="mx-auto md:max-w-[90%] flex flex-col md:flex-row gap-y-2 md:gap-y-0">

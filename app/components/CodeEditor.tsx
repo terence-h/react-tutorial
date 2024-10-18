@@ -18,6 +18,7 @@ interface CodeEditorProps extends PropsWithChildren {
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
     initialCode?: string;
     height?: string;
+    readOnly?: boolean;
 }
 
 interface LintMessage {
@@ -54,7 +55,7 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ languages, initialCode, height = "auto" }: CodeEditorProps) {
+export default function CodeEditor({ languages, initialCode, height = "auto", readOnly = false }: CodeEditorProps) {
     const [code, setCode] = useState<string>(initialCode ?? "// Write your code here\nconsole.log('Hello, World!');");
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
@@ -217,7 +218,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
 
     return (
         <>
-            <div className="flex flex-col md:flex-row items-center space-y-3 md:space-x-4 md:space-y-0 mb-4">
+            <div className="flex flex-row items-center justify-between md:justify-normal md:space-x-4 mb-4">
                 <select
                     className="bg-background border border-gray-300 rounded px-2 py-1 md:px-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={language}
@@ -259,10 +260,13 @@ export default function CodeEditor({ languages, initialCode, height = "auto" }: 
             </div >
             <CodeMirror
                 value={code}
+                // width='fit-content'
+                // width='90%'
                 height={height}
                 extensions={extensions}
                 theme={getThemeExtension()}
                 onChange={setCode}
+                readOnly={readOnly}
             />
             <div className="mt-1">
                 <h2 className="text-xl font-semibold mb-2">Output:</h2>

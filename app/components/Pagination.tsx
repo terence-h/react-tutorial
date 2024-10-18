@@ -18,7 +18,7 @@ export default function Pagination({
     nextLabel = 'Next',
 }: PaginationProps) {
     return (
-        <div className="flex justify-between mt-8 h-12 text-xs md:text-base" >
+        <div className="flex justify-between mt-16 h-12 text-xs md:text-base" >
             {
                 previousPath ? (
                     <Link href={previousPath} passHref className='flex items-center px-2 md:px-5 bg-gray-200 dark:bg-slate-700 rounded-full text-blue-600 hover:text-blue-800 dark:text-gray-300 dark:hover:text-gray-500 transition-colors duration-200'>
