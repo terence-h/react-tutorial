@@ -8,12 +8,11 @@ export const eslintConfig_js = {
             jsx: true,
         },
     },
-    plugins: [], // 'react'
+    plugins: ['react'],
     extends: [
         'eslint:recommended',
         // 'plugin:@typescript-eslint/recommended',
-        // 'plugin:react/recommended',
-        'next'
+        'plugin:react/recommended',
     ],
     env: {
         browser: true, // Recognize browser globals like 'window' and 'console'
