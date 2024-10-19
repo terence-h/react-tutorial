@@ -39,7 +39,7 @@ export default App;`
 
 const reactWriteHeaderCode = `export default function App() {
   return (
-    // Insert your HTML element below. Just like how you would do it in HTML.
+    // Insert your <h1> element below. Just like how you would do it in HTML.
     
   );
 }`
