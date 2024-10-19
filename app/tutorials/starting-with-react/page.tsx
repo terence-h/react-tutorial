@@ -20,8 +20,8 @@ export default function Page() {
             <Pagination
                 previousLabel="Setting Up Tools and React Project Environment"
                 previousPath="/tutorials/setting-up"
-                nextPath="/"
-                nextLabel="..." />
+                nextPath="/tutorials/building-functional-components"
+                nextLabel="Building Functional Components" />
         </Section>
     );
 }

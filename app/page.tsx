@@ -10,7 +10,7 @@ export default function Home() {
     <LoaderWrapper>
       <Header>Welcome to React Learning Guide</Header>
       <Paragraph>Here&apos;s a code editor for you to have fun writing JavaScript, TypeScript and React in either JSX or TSX!</Paragraph>
-      <CodeEditor />
+      <CodeEditor id={1} />
       <Pagination
         nextPath="/tutorials/introduction"
         nextLabel="Introduction" />

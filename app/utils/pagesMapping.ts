@@ -58,6 +58,13 @@ const pages: Category[] = [
             { id: 55, name: "Let React Handle the UI Updates", link: "/tutorials/starting-with-react#key-pointer-five" },
         ]
     },
+    {
+        id: 6,
+        name: "Building Functional Components",
+        subCategories: [
+            { id: 51, name: "Temp", link: "/tutorials/building-functional-components" },
+        ]
+    },
 ];
 
 export default pages;

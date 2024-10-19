@@ -7,10 +7,10 @@ export default function KeyPointerThree() {
     return (
         <article id="key-pointer-three">
             <Header level={2}>3. Managing State for Dynamic Data</Header>
-            <Paragraph marginBottom={0}>In traditional HTML/JavaScript, managing dynamic data like a counter requires manual updating the DOM element.</Paragraph>
+            <Paragraph>In traditional HTML/JavaScript, managing dynamic data like a counter requires manual updating the DOM element.</Paragraph>
             <CodeBlock code={htmlCode} language={"html"} />
-            <Paragraph marginTop={5} marginBottom={0}>In React, we use <span className="underline">states</span> to track dynamic data. <span className="underline">We do not directly manipulate the DOM in most cases</span> but we &quot;tell&quot; React to update the DOM when we make changes to a state. Run the code and see what happens!</Paragraph>
-            <CodeEditor languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <Paragraph className="mt-5">In React, we use <span className="underline">states</span> to track dynamic data. <span className="underline">We do not directly manipulate the DOM in most cases</span> but we &quot;tell&quot; React to update the DOM when we make changes to a state. Run the code and see what happens!</Paragraph>
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
         </article>
     );
 }

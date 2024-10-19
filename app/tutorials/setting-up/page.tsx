@@ -4,7 +4,6 @@ import DownloadTools from "./DownloadTools";
 import SetupNVM from "./SetupNVM";
 import CreateReactApp from "./CreateReactApp";
 
-
 export default function Page() {
     return (
         <Section id="setting-up">

@@ -12,23 +12,23 @@ export default function TSPractice() {
 
             <Header level={3}>Challenge 1</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying the proper type for the parameter and return value.</Paragraph>
-            <CodeEditor height="300px" initialCode={challengeOneInitial} languages={['typescript']} />
+            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['typescript']} />
 
             <Header level={3}>Challenge 2</Header>
             <Paragraph>Convert the following JavaScript object declaration to TypeScript by defining an interface for the object and typing the variable.</Paragraph>
-            <CodeEditor height="300px" initialCode={challengeTwoInitial} languages={['typescript']} />
+            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['typescript']} />
 
             <Header level={3}>Challenge 3</Header>
             <Paragraph>Convert the following JavaScript array declaration to TypeScript by specifying the array type.</Paragraph>
-            <CodeEditor height="200px" initialCode={challengeThreeInitial} languages={['typescript']} />
+            <CodeEditor id={3} height="200px" initialCode={challengeThreeInitial} languages={['typescript']} />
 
             <Header level={3}>Challenge 4</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying that the function returns a Promise which resolves to a string. Hint: This was mentioned in the first link (video) in the TypeScript references. Feel free to use Google or ChatGPT!</Paragraph>
-            <CodeEditor height="300px" initialCode={challengeFourInitial} languages={['typescript']} />
+            <CodeEditor id={4} height="300px" initialCode={challengeFourInitial} languages={['typescript']} />
 
             <Header level={3}>Challenge 5</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by typing the parameters and making the second parameter optional. Hint: Ask ChatGPT or Google if you can&apos;t figure it out.</Paragraph>
-            <CodeEditor height="300px" initialCode={challengeFiveInitial} languages={['typescript']} />
+            <CodeEditor id={5} height="300px" initialCode={challengeFiveInitial} languages={['typescript']} />
         </article>
     );
 }

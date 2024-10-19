@@ -18,9 +18,7 @@ export default function CreateReactApp() {
             <Paragraph>If you plan to use the built in code editor in this web app, you can skip this section for now and proceed to install once you want to do the case study.
                 <br />However, it is recommended that you use Visual Studio Code to follow through as it will provide a better idea on how to work with multiple files and the project structure in React.
             </Paragraph>
-            <Paragraph marginBottom={0}>For this tutorial, we will be using Create React App to initialise a React project.
-                <br />You can follow the tutorial here: <Hyperlink href="https://create-react-app.dev/docs/getting-started">Create React App (create-react-app.dev)</Hyperlink>
-                <br />Or follow the steps:
+            <Paragraph className="mt-5">For this tutorial, we will be using Create React App to initialise a React project. You can follow the tutorial here: <Hyperlink href="https://create-react-app.dev/docs/getting-started">Create React App (create-react-app.dev)</Hyperlink> or follow the steps:
             </Paragraph>
             <NestedList items={setupReact} />
             <p>Optional: You can play around with it by going to the App.js for JavaScript or App.tsx for TypeScript as shown in the picture below.</p>

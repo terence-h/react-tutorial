@@ -7,10 +7,10 @@ export default function KeyPointerFour() {
     return (
         <article id="key-pointer-four">
             <Header level={2}>4. Think About Reusability</Header>
-            <Paragraph marginBottom={0}>As mentioned earlier in key point 1, certain codes are repeated even though they behave similar.</Paragraph>
+            <Paragraph>As mentioned earlier in key point 1, certain codes are repeated even though they behave similar.</Paragraph>
             <CodeBlock code={htmlCode} language={"html"} />
-            <Paragraph marginTop={5} marginBottom={0}>In React, we can pass the props as mentioned earlier and create different variants of the same component. Run the code and see what happens!</Paragraph>
-            <CodeEditor languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <Paragraph className="mt-5">In React, we can pass the props as mentioned earlier and create different variants of the same component. Run the code and see what happens!</Paragraph>
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
         </article>
     );
 }

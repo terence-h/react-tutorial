@@ -7,10 +7,10 @@ export default function KeyPointerTwo() {
     return (
         <article id="key-pointer-two">
             <Header level={2}>2. Components &quot;Talk&quot; to Each Other with Props</Header>
-            <Paragraph marginBottom={0}>In traditional HTML/JavaScript, you would use global variables or find elements by their ID to pass information.</Paragraph>
+            <Paragraph>In traditional HTML/JavaScript, you would use global variables or find elements by their ID to pass information.</Paragraph>
             <CodeBlock code={htmlCode} language={"html"} />
-            <Paragraph marginTop={5} marginBottom={0}>In React, we pass data called <span className="underline">&quot;props&quot;</span> to components, which then can be used in the component function itself. Run the code and see what happens!</Paragraph>
-            <CodeEditor languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <Paragraph className="mt-5">In React, we pass data called <span className="underline">&quot;props&quot;</span> to components, which then can be used in the component function itself. Run the code and see what happens!</Paragraph>
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
         </article>
     );
 }

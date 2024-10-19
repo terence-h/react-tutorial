@@ -12,9 +12,10 @@ import debounce from 'lodash/debounce';
 import { executeCode } from '../utils/executeCode';
 import ErrorBoundary from './ErrorBoundary';
 import { useLocalStorage } from '../contexts/LocalStorageContext';
-// import useLocalStorage from '../hooks/useLocalStorage';
+import { triggerResetErrorBoundary } from '../utils/errorEvents';
 
 interface CodeEditorProps extends PropsWithChildren {
+    id: number;
     languages?: Array<'javascript' | 'typescript' | 'jsx' | 'tsx'>;
     initialCode?: string;
     height?: string;
@@ -38,30 +39,30 @@ interface LintResponse {
 
 /**
  * A customizable code editor component that supports various languages and themes.
- * 
+ * @param id - Unique identifier for the code editor. This allows any runtime error to be handled independently from other same page code editors
  * @param languages - Optional array of supported languages. Defaults to all if not provided.
  * @param initialCode - Optional initial code to be displayed in the editor.
  * @param height - Optional height for the code editor. Defaults to auto
  * @returns The rendered code editor component.
  * 
  * @example
- * <CodeEditor />
+ * <CodeEditor id={1} />
  * 
  * @example
  * <CodeEditor 
+ *    id={1}
  *    languages={["javascript", "typescript", "jsx", "tsx"]}
  *    initialCode="console.log('hello');"
  * />
  * 
 
  */
-export default function CodeEditor({ languages, initialCode, height = "auto", readOnly = false }: CodeEditorProps) {
+export default function CodeEditor({ id, languages, initialCode, height = "auto", readOnly = false }: CodeEditorProps) {
     const [code, setCode] = useState<string>(initialCode ?? "// Write your code here\nconsole.log('Hello, World!');");
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
-    // const [theme, setTheme] = useLocalStorage<string>('codeTheme', 'vs-dark');
 
     const { getItem, setItem } = useLocalStorage();
     const theme = getItem('codeTheme') as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
@@ -95,6 +96,8 @@ export default function CodeEditor({ languages, initialCode, height = "auto", re
     }, [language, diagnostics]);
 
     async function handleRunCode() {
+        triggerResetErrorBoundary(id);
+
         const result = executeCode(code, language);
         if (result.output) {
             setOutput(`Output:\n${result.output}`);
@@ -275,7 +278,7 @@ export default function CodeEditor({ languages, initialCode, height = "auto", re
                         {output}
                     </pre>
                 ) : (
-                    <ErrorBoundary><div className='border-2 dark:bg-foreground dark:text-background border-black'>{output}</div></ErrorBoundary>
+                    <ErrorBoundary id={id}><div className='border-2 dark:bg-foreground dark:text-background border-black'>{output}</div></ErrorBoundary>
                 )}
             </div>
         </>
