@@ -2,10 +2,16 @@ import Pagination from "@/app/components/Pagination";
 import Section from "@/app/components/Section";
 import LearnMore from "@/app/components/LearnMore";
 import Hyperlink from "@/app/components/Hyperlink";
+import IntroductionStates from "./IntroductionStates";
+import CreatingState from "./CreatingState";
+import IndividualSharedState from "./IndividualSharedState";
 
 export default function Page() {
     return (
         <Section id="managing-states">
+            <IntroductionStates />
+            <CreatingState />
+            <IndividualSharedState />
             {/* <LearnMore references={references} /> */}
             <Pagination
                 previousLabel="Practice: Handling User Events"

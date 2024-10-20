@@ -82,6 +82,8 @@ const pages: Category[] = [
         name: "Managing States with useState",
         subCategories: [
             { id: 81, name: "Introduction to useState", link: "/tutorials/managing-states#introduction" },
+            { id: 82, name: "Creating State", link: "/tutorials/managing-states#creating-a-state" },
+            { id: 83, name: "Individual & Shared States", link: "/tutorials/managing-states#individual-shared-states" },
         ]
     },
 ];
