@@ -1,19 +1,17 @@
 import Pagination from "@/app/components/Pagination";
 import Section from "@/app/components/Section";
-import AddingOnClick from "./AddingOnClick";
 import LearnMore from "@/app/components/LearnMore";
 import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="handling-user-events">
-            <AddingOnClick />
-            <LearnMore references={references} />
+        <Section id="managing-states">
+            {/* <LearnMore references={references} /> */}
             <Pagination
-                previousLabel="Practice: Building Functional Components"
-                previousPath="/practices/building-functional-components"
-                nextPath="/practices/handling-user-events"
-                nextLabel="Practice: Handling User Events" />
+                previousLabel="Practice: Handling User Events"
+                previousPath="/practices/handling-user-events"
+                nextPath="/"
+                nextLabel="Rendering Conditionally and Dynamically" />
         </Section>
     );
 }

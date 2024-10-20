@@ -56,8 +56,10 @@ function Button() {
 export default function App() {
   return (
     <>
-      {/* Add in any CSS color! Not sure what to use? Here's a color: #f34587 */}
-      <Header style={{ color: ""}} />
+      {/* Add in any CSS color! Not sure what to use? Here's a color: #f34587
+      NOTE: The code editor supports Tailwind CSS.
+      If you are familiar with it, feel free to use it in the className prop instead of style prop. */}
+      <Header style={{ backgroundColor: ""}} />
       <Button />
     </>
   );

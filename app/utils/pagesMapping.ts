@@ -74,6 +74,14 @@ const pages: Category[] = [
         name: "Handling User Events",
         subCategories: [
             { id: 71, name: "Adding onClick Handler to Buttons", link: "/tutorials/handling-user-events#adding-onclick" },
+            { id: 72, name: "Practice: Handling User Events", link: "/practices/handling-user-events" },
+        ]
+    },
+    {
+        id: 8,
+        name: "Managing States with useState",
+        subCategories: [
+            { id: 81, name: "Introduction to useState", link: "/tutorials/managing-states#introduction" },
         ]
     },
 ];
