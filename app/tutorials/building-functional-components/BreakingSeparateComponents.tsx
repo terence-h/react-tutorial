@@ -26,15 +26,11 @@ export default function BreakingSeparateComponents() {
 const separateHeaderButtonComponentCode = `// Assume that anything outside of function App are separate components/files.
 // The only difference you would have to do in an editor would be to export the function and import it.
 function Header() {
-  return (
-    <h1>Header</h1>
-  );
+  return <h1>Header</h1>;
 }
 
 function Button() {
-  return (
-    <button>Button</button>
-  );
+  return <button>Button</button>;
 }
 
 export default function App() {

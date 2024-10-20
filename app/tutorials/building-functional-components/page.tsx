@@ -3,6 +3,7 @@ import Pagination from "@/app/components/Pagination";
 import AddingAHeaderAndParagraph from "./AddingAHeaderAndParagraph";
 import BreakingSeparateComponents from "./BreakingSeparateComponents";
 import PassingProps from "./PassingProps";
+import CreatingVariants from "./CreatingVariants";
 
 export default function Page() {
     return (
@@ -10,6 +11,7 @@ export default function Page() {
             <AddingAHeaderAndParagraph />
             <BreakingSeparateComponents />
             <PassingProps />
+            <CreatingVariants />
             <Pagination
                 previousLabel="Starting with React"
                 previousPath="/tutorials/starting-with-react"
