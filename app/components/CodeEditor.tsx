@@ -80,20 +80,20 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
     }
 
     // Use useRef to store the debounced function
-    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const debouncedLintCode = useRef(debounce(lintCode, 500)).current;
+    const debouncedLintCode = useRef(debounce(lintCode, 500)).current;
 
-        // Effect to trigger linting when code or language changes
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        useEffect(() => {
+    // Effect to trigger linting when code or language changes
+    useEffect(() => {
+        // Lint library issue with deployed production build. Local production build and development build works fine.
+        // Will look into solutions
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes("192.168.")) {
             debouncedLintCode(code, language);
+        }
 
-            if (window.localStorage != null && saveCode.length > 0) {
-                window.localStorage.setItem(saveCode, code);
-            }
-        }, [code, language, debouncedLintCode]);
-    }
+        if (window.localStorage != null && saveCode.length > 0) {
+            window.localStorage.setItem(saveCode, code);
+        }
+    }, [code, language, debouncedLintCode]);
 
     // Effect to set up language and theme extensions
     useEffect(() => {
