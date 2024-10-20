@@ -50,13 +50,13 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
     return (
         <>
             {/* Mobile Navbar */}
-            <div className="fixed flex mb-6 md:mb-0 h-10 w-10 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-[49] left-[45%] md:top-5 md:left-5 md:px-4"
+            <div className="fixed flex mb-6 md:mb-0 h-12 w-12 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-[49] left-[43.2%] md:top-5 md:left-5 md:px-4"
                 onClick={toggleNavbar}>
                 <div>
                     {isNavbarOpen ? (
-                        <XMarkIcon className="h-6 w-6" />
+                        <XMarkIcon className="h-8 w-8 md:h-8 md:w-8" />
                     ) : (
-                        <Bars3Icon className="h-6 w-6" />
+                        <Bars3Icon className="h-8 w-8 md:h-8 md:w-8" />
                     )}
                 </div>
 

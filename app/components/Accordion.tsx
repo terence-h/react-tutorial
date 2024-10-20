@@ -22,7 +22,7 @@ export default function Accordion ({ children, allowMultipleOpen = false }: Acco
     };
 
     return (
-        <div className="w-full mx-auto">
+        <div className="w-fit mx-auto md:ml-0 md: mr-0">
             {children.map((child, index) =>
                 React.cloneElement(child, {
                     isOpen: openIndices.includes(index),

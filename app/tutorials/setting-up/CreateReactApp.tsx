@@ -43,7 +43,7 @@ const setupReact = [
         id: 3,
         label: (<>
             <span>A terminal should open at the bottom of the UI</span>
-            <ImageContainer className="w-full md:w-1/2" src={vsCodeTerminalUi} alt="VSCode Terminal UI" />
+            <ImageContainer className="w-full md:w-1/2 mb-5" src={vsCodeTerminalUi} alt="VSCode Terminal UI" />
         </>),
     },
     {

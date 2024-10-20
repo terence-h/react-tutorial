@@ -8,7 +8,7 @@ interface LearnMoreProps {
 export default function LearnMore({ references }: LearnMoreProps) {
     return (
         <article id="learn-more">
-            <Header level={2}>Learn More</Header>
+            <Header>Learn More</Header>
             <NestedList items={references} />
         </article>
     );

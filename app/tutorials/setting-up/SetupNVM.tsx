@@ -1,5 +1,6 @@
 import Header from "@/app/components/Header";
 import ImageContainer from "@/app/components/ImageContainer";
+import InformationText from "@/app/components/InformationText";
 import NestedList, { ListItem } from "@/app/components/NestedList";
 import Paragraph from "@/app/components/Paragraph";
 import nvmInstallLts from "@/public/tutorials/setting-up/nvm-install-lts.jpg";
@@ -9,8 +10,8 @@ export default function SetupNVM() {
     return (
         <article id="setting-up-nvm">
             <Header>Setting up Node Version Manager (NVM)</Header>
-            <Paragraph>DO NOT follow this if you are using Node.js.
-                <br />Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.
+            <InformationText>DO NOT follow this if you are not using NVM</InformationText>
+            <Paragraph>Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.
             </Paragraph>
             <Paragraph className="underline">To install Node.js via NVM (Use LTS for this tutorial):</Paragraph>
             <NestedList items={nvmInstallCommands} />
