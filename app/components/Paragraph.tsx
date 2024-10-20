@@ -6,6 +6,6 @@ interface ParagraphProps extends PropsWithChildren {
 
 export default function Paragraph({ children, className }: ParagraphProps) {
     return (
-        <p className={`text-justify leading-7 md:leading-8 ${className || ''}`}>{children}</p>
+        <p className={`text-justify leading-7 ${className || ''}`}>{children}</p>
     );
 }

@@ -7,8 +7,10 @@ export default function KeyPointerFive() {
     return (
         <article id="key-pointer-five">
             <Header level={2}>5. Let React Handle the UI Updates</Header>
+
             <Paragraph>In traditional HTML/JavaScript, you have to handle the updating the UI yourself especially when working with dynamic data.</Paragraph>
             <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
+            
             <Paragraph className="mt-5">As mentioned earlier in key point 3, we describe what the UI will look like and let React update the UI. Run the code and see what happens!</Paragraph>
             <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
         </article>

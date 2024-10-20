@@ -12,18 +12,22 @@ export default function AddingAHeaderAndParagraph() {
     return (
         <article id="adding-header-paragraph">
             <Header>Adding a Header and Paragraph</Header>
+
             <Paragraph>Typically, the React root of the app starts in App.js and HTML codes are directly written into the JSX/TSX file as shown below.
-                <br />All 3 options are acceptable and it&apos;s mostly preference on how you want to write your React component.
+                <br /><br />All 3 options are acceptable and it&apos;s mostly preference on how you want to write your React component.
             </Paragraph>
             <CodeBlock code={reactAppDefaultCode} language={"jsx"} allowCopy={false} />
+
             <Paragraph className="mt-5">As mentioned earlier, we directly write HTML code into JavaScript in React. Give it a shot and write your first HTML directly in JavaScript!</Paragraph>
-            <InformationText className="mb-5">You can Toggle between JSX (JavaScript) or TSX (TypeScript). You can also change the theme!</InformationText>
+            <InformationText className="mb-5">You can Toggle between JSX (JavaScript) or TSX (TypeScript).</InformationText>
             <CodeEditor id={1} initialCode={reactWriteHeaderCode} languages={["jsx", "tsx"]} />
+
             <Paragraph className="mt-5">Let&apos;s try adding a button into the same component. The code has been written for you. Try running and code and see what happens.
-                <br />Can you try and fix the error? <span className="italic">Hint: The error provides you with the solution. Your React component return can only have 1 root element. You do not have to remove anything.</span>
-                <br />The solutions are right below the code editor if you want to check out the different ways to solve this issue.
+                <br /><br />Can you try and fix the error? <span className="italic">Hint: The error provides you with the solution. Your React component return can only have 1 root element. You do not have to remove anything.</span>
+                <br /><br />The solutions are right below the code editor if you want to check out the different ways to solve this issue.
             </Paragraph>
             <CodeEditor id={2} initialCode={fixMultipleRootCode} languages={["jsx", "tsx"]} />
+            
             <Accordion allowMultipleOpen={true}>
                 <AccordionItem title="Solution 1 - Using JSX fragment">
                     <CodeBlock code={solutionOneMultipleRootCode} language={"jsx"} />

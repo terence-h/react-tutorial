@@ -6,6 +6,7 @@ export default function TSWhenToUse() {
     return (
         <article id="when-to-use">
             <Header>When to use JavaScript or TypeScript</Header>
+            
             <Paragraph>This is only a general guideline/recommendation and not to be followed strictly.</Paragraph>
             <Table headers={headers} data={data} />
         </article>

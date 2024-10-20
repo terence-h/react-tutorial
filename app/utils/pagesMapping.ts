@@ -35,7 +35,7 @@ const pages: Category[] = [
             { id: 33, name: "Advantages over JavaScript", link: "/tutorials/introduction-to-typescript#advantages" },
             { id: 34, name: "When to use JavaScript or TypeScript", link: "/tutorials/introduction-to-typescript#when-to-use" },
             { id: 35, name: "Learn More", link: "/tutorials/introduction-to-typescript#learn-more" },
-            { id: 36, name: "Practice: Writing TypeScript", link: "/tutorials/introduction-to-typescript#practice" },
+            { id: 36, name: "Practice: Writing TypeScript", link: "/practices/writing-typescript" },
         ]
     },
     {
@@ -66,6 +66,14 @@ const pages: Category[] = [
             { id: 62, name: "Breaking into Separate Components", link: "/tutorials/building-functional-components#breaking-separate-components" },
             { id: 63, name: "Passing Props to Components", link: "/tutorials/building-functional-components#passing-props" },
             { id: 64, name: "Creating Variants of a Component", link: "/tutorials/building-functional-components#creating-variants" },
+            { id: 65, name: "Practice: Building Functional Components", link: "/practices/building-functional-components" },
+        ]
+    },
+    {
+        id: 7,
+        name: "Handling User Events",
+        subCategories: [
+            { id: 71, name: "Adding onClick Handler to Buttons", link: "/tutorials/handling-user-events#adding-onclick" },
         ]
     },
 ];

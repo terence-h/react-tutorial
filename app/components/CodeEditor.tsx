@@ -20,6 +20,7 @@ interface CodeEditorProps extends PropsWithChildren {
     initialCode?: string;
     height?: string;
     readOnly?: boolean;
+    saveCode?: string;
 }
 
 interface LintMessage {
@@ -43,6 +44,8 @@ interface LintResponse {
  * @param languages - Optional array of supported languages. Defaults to all if not provided.
  * @param initialCode - Optional initial code to be displayed in the editor.
  * @param height - Optional height for the code editor. Defaults to auto
+ * @param readOnly - Enable/disable editing
+ * @param saveCode - Enable/disable saving of code through local storage. Enter the localStorage key you want to save it as
  * @returns The rendered code editor component.
  * 
  * @example
@@ -57,14 +60,19 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ id, languages, initialCode, height = "auto", readOnly = false }: CodeEditorProps) {
-    const [code, setCode] = useState<string>(initialCode ?? "// Write your code here\nconsole.log('Hello, World!');");
+export default function CodeEditor({ id, languages, initialCode = "// Write your code here\nconsole.log('Hello, World!');", height = "auto", readOnly = false, saveCode = "" }: CodeEditorProps) {
+    const { getItem, setItem } = useLocalStorage();
+    const [code, setCode] = useState<string>(() => {
+        if (saveCode.length > 0) {
+            return window.localStorage.getItem(saveCode) ?? initialCode;
+        }
+        return initialCode;
+    });
     const [language, setLanguage] = useState<'javascript' | 'typescript' | 'jsx' | 'tsx'>(languages?.[0] ?? 'javascript');
     const [output, setOutput] = useState<string | JSX.Element>('');
     const [extensions, setExtensions] = useState<Extension[]>([]);
     const [diagnostics, setDiagnostics] = useState<Diagnostic[]>([]);
 
-    const { getItem, setItem } = useLocalStorage();
     const theme = getItem('codeTheme') as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
 
     function handleSetTheme(theme: 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai') {
@@ -80,6 +88,10 @@ export default function CodeEditor({ id, languages, initialCode, height = "auto"
         // eslint-disable-next-line react-hooks/rules-of-hooks
         useEffect(() => {
             debouncedLintCode(code, language);
+
+            if (window.localStorage != null && saveCode.length > 0) {
+                window.localStorage.setItem(saveCode, code);
+            }
         }, [code, language, debouncedLintCode]);
     }
 

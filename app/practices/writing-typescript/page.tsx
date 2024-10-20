@@ -2,34 +2,45 @@ import CodeEditor from "@/app/components/CodeEditor";
 import Header from "@/app/components/Header";
 import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
+import Section from "../../components/Section";
+import Pagination from "@/app/components/Pagination";
 
-export default function TSPractice() {
+export default function Page() {
     return (
-        <article id="practice">
+        <Section id="writing-typescript">
             <Header>Practice: Writing TypeScript</Header>
-            <Paragraph>You are given 5 piece of JavaScript codes snippets and asked to convert to TypeScript.</Paragraph>
-            <InformationText className="mb-5">If you are an offline editor like VSCode, the file extension for TypeScript is .ts</InformationText>
+
+            <InformationText>The code changes in the practices section are saved into your browser locally so you do not have to finish in one go!
+                <br /><br />If you are an offline editor like VSCode, the file extension for TypeScript is .ts
+            </InformationText>
+            <Paragraph className="mt-5">You are given 5 JavaScript code snippets and asked to convert them to TypeScript.</Paragraph>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying the proper type for the parameter and return value.</Paragraph>
-            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['typescript']} />
+            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['typescript']} saveCode="intro-ts-c1" />
 
             <Header level={2}>Challenge 2</Header>
             <Paragraph>Convert the following JavaScript object declaration to TypeScript by defining an interface for the object and typing the variable.</Paragraph>
-            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['typescript']} />
+            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['typescript']} saveCode="intro-ts-c2" />
 
             <Header level={2}>Challenge 3</Header>
             <Paragraph>Convert the following JavaScript array declaration to TypeScript by specifying the array type.</Paragraph>
-            <CodeEditor id={3} height="200px" initialCode={challengeThreeInitial} languages={['typescript']} />
+            <CodeEditor id={3} height="200px" initialCode={challengeThreeInitial} languages={['typescript']} saveCode="intro-ts-c3" />
 
             <Header level={2}>Challenge 4</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying that the function returns a Promise which resolves to a string. Hint: This was mentioned in the first link (video) in the TypeScript references. Feel free to use Google or ChatGPT!</Paragraph>
-            <CodeEditor id={4} height="300px" initialCode={challengeFourInitial} languages={['typescript']} />
+            <CodeEditor id={4} height="300px" initialCode={challengeFourInitial} languages={['typescript']} saveCode="intro-ts-c4" />
 
             <Header level={2}>Challenge 5</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by typing the parameters and making the second parameter optional. Hint: Ask ChatGPT or Google if you can&apos;t figure it out.</Paragraph>
-            <CodeEditor id={5} height="300px" initialCode={challengeFiveInitial} languages={['typescript']} />
-        </article>
+            <CodeEditor id={5} height="300px" initialCode={challengeFiveInitial} languages={['typescript']} saveCode="intro-ts-c5" />
+
+            <Pagination
+                previousLabel="Introduction to TypeScript"
+                previousPath="/tutorials/introduction-to-typescript"
+                nextPath="/tutorials/setting-up"
+                nextLabel="Setting Up Tools and React Project Environments" />
+        </Section>
     );
 }
 

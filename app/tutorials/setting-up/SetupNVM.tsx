@@ -10,14 +10,18 @@ export default function SetupNVM() {
     return (
         <article id="setting-up-nvm">
             <Header>Setting up Node Version Manager (NVM)</Header>
+
             <InformationText>DO NOT follow this if you are not using NVM</InformationText>
-            <Paragraph>Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.
-            </Paragraph>
+
+            <Paragraph>Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.</Paragraph>
+
             <Paragraph className="underline">To install Node.js via NVM (Use LTS for this tutorial):</Paragraph>
             <NestedList items={nvmInstallCommands} />
             <ImageContainer src={nvmInstallLts} className="mt-2 w-full md:w-1/2" alt={"nvm install lts"} />
+
             <Paragraph className="mt-5">Once you installed the LTS version, type &quot;nvm use lts&quot; or &quot;nvm use [version]&quot; to set the default Node.js version to use.</Paragraph>
             <ImageContainer src={nvmUseLts} className="mt-2 w-full md:w-1/2" alt={"nvm use lts"} />
+            
             <Paragraph className="mt-5 underline">Useful commands to check/change Node.js versions</Paragraph>
             <NestedList items={nvmUsefulCommands} />
         </article>

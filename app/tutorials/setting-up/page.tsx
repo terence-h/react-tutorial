@@ -11,8 +11,8 @@ export default function Page() {
             <SetupNVM />
             <CreateReactApp />
             <Pagination
-                previousLabel="Introduction to TypeScript"
-                previousPath="/tutorials/introduction-to-typescript"
+                previousLabel="Practice: Writing TypeScript"
+                previousPath="/practices/writing-typescript"
                 nextPath="/tutorials/starting-with-react"
                 nextLabel="Starting with React" />
         </Section>
