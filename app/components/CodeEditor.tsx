@@ -92,7 +92,7 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
         }
 
         if (window.localStorage != null && saveKey.length > 0) {
-            debouncedSaveCode();
+            debouncedSaveCode(code);
         }
     }, [code, language, debouncedLintCode]);
 
@@ -202,9 +202,8 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
     }
 
     // Function to save code editor code
-    function saveCode() {
+    function saveCode(code: string) {
         window.localStorage.setItem(saveKey, code);
-        console.log('save triggered');
     }
 
     // Function to get the theme extension
