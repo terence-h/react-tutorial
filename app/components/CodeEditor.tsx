@@ -90,11 +90,14 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
         if (window.location.hostname === 'localhost' || window.location.hostname.includes("192.168.")) {
             debouncedLintCode(code, language);
         }
+    }, [code, language, debouncedLintCode]);
 
+    // Effect to trigger localStorage save for code editor
+    useEffect(() => {
         if (window.localStorage != null && saveKey.length > 0) {
             debouncedSaveCode(code);
         }
-    }, [code, language, debouncedLintCode]);
+    }, [code, debouncedSaveCode, saveKey.length])
 
     // Effect to set up language and theme extensions
     useEffect(() => {

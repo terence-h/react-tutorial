@@ -1,7 +1,7 @@
 import Pagination from "@/app/components/Pagination";
 import Section from "@/app/components/Section";
-import LearnMore from "@/app/components/LearnMore";
-import Hyperlink from "@/app/components/Hyperlink";
+// import LearnMore from "@/app/components/LearnMore";
+// import Hyperlink from "@/app/components/Hyperlink";
 import IntroductionStates from "./IntroductionStates";
 import CreatingState from "./CreatingState";
 import IndividualSharedState from "./IndividualSharedState";
@@ -22,9 +22,9 @@ export default function Page() {
     );
 }
 
-const references = [
-    {
-        id: 1,
-        label: (<Hyperlink href="https://react.dev/learn/responding-to-events">Responding to Events - React.dev</Hyperlink>)
-    }
-];
+// const references = [
+//     {
+//         id: 1,
+//         label: (<Hyperlink href="https://react.dev/learn/responding-to-events">Responding to Events - React.dev</Hyperlink>)
+//     }
+// ];
