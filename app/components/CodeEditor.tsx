@@ -20,7 +20,7 @@ interface CodeEditorProps extends PropsWithChildren {
     initialCode?: string;
     height?: string;
     readOnly?: boolean;
-    saveCode?: string;
+    saveKey?: string;
 }
 
 interface LintMessage {
@@ -45,7 +45,7 @@ interface LintResponse {
  * @param initialCode - Optional initial code to be displayed in the editor.
  * @param height - Optional height for the code editor. Defaults to auto
  * @param readOnly - Enable/disable editing
- * @param saveCode - Enable/disable saving of code through local storage. Enter the localStorage key you want to save it as
+ * @param saveKey - Enable/disable saving of code through local storage. Enter the localStorage key you want to save it as
  * @returns The rendered code editor component.
  * 
  * @example
@@ -60,11 +60,11 @@ interface LintResponse {
  * 
 
  */
-export default function CodeEditor({ id, languages, initialCode = "// Write your code here\nconsole.log('Hello, World!');", height = "auto", readOnly = false, saveCode = "" }: CodeEditorProps) {
+export default function CodeEditor({ id, languages, initialCode = "// Write your code here\nconsole.log('Hello, World!');", height = "auto", readOnly = false, saveKey = "" }: CodeEditorProps) {
     const { getItem, setItem } = useLocalStorage();
     const [code, setCode] = useState<string>(() => {
-        if (saveCode.length > 0) {
-            return window.localStorage.getItem(saveCode) ?? initialCode;
+        if (saveKey.length > 0) {
+            return window.localStorage.getItem(saveKey) ?? initialCode;
         }
         return initialCode;
     });
@@ -81,6 +81,7 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
 
     // Use useRef to store the debounced function
     const debouncedLintCode = useRef(debounce(lintCode, 500)).current;
+    const debouncedSaveCode = useRef(debounce(saveCode, 500)).current;
 
     // Effect to trigger linting when code or language changes
     useEffect(() => {
@@ -90,8 +91,8 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
             debouncedLintCode(code, language);
         }
 
-        if (window.localStorage != null && saveCode.length > 0) {
-            window.localStorage.setItem(saveCode, code);
+        if (window.localStorage != null && saveKey.length > 0) {
+            debouncedSaveCode();
         }
     }, [code, language, debouncedLintCode]);
 
@@ -198,6 +199,12 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
             console.error('Linting error:', error);
             setDiagnostics([]);
         }
+    }
+
+    // Function to save code editor code
+    function saveCode() {
+        window.localStorage.setItem(saveKey, code);
+        console.log('save triggered');
     }
 
     // Function to get the theme extension

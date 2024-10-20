@@ -15,11 +15,11 @@ export default function Page() {
             <Header level={2}>Challenge 1</Header>
             <Paragraph>You are now asked to create a Paragraph component. The Paragraph component must be able to take in the style property and be able to change the text. Paragraph styling: text-decoration: &quot;underline dotted&quot;
             </Paragraph>
-            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['jsx', 'tsx']} saveCode="building-fc-c1" />
+            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['jsx', 'tsx']} saveKey="building-fc-c1" />
 
             <Header level={2}>Challenge 2</Header>
             <Paragraph>You are now tasked to create a Section component that wraps 3 different components (Header, Paragraph and Button) together. The new Section component must be able to style BOTH Header and Paragraph components. It must also be able to set BOTH Header and Paragraph text.</Paragraph>
-            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveCode="building-fc-c2" />
+            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveKey="building-fc-c2" />
 
             <Pagination
                 previousLabel="Building Functional Components"

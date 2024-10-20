@@ -17,23 +17,23 @@ export default function Page() {
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying the proper type for the parameter and return value.</Paragraph>
-            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['typescript']} saveCode="intro-ts-c1" />
+            <CodeEditor id={1} height="300px" initialCode={challengeOneInitial} languages={['typescript']} saveKey="intro-ts-c1" />
 
             <Header level={2}>Challenge 2</Header>
             <Paragraph>Convert the following JavaScript object declaration to TypeScript by defining an interface for the object and typing the variable.</Paragraph>
-            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['typescript']} saveCode="intro-ts-c2" />
+            <CodeEditor id={2} height="300px" initialCode={challengeTwoInitial} languages={['typescript']} saveKey="intro-ts-c2" />
 
             <Header level={2}>Challenge 3</Header>
             <Paragraph>Convert the following JavaScript array declaration to TypeScript by specifying the array type.</Paragraph>
-            <CodeEditor id={3} height="200px" initialCode={challengeThreeInitial} languages={['typescript']} saveCode="intro-ts-c3" />
+            <CodeEditor id={3} height="200px" initialCode={challengeThreeInitial} languages={['typescript']} saveKey="intro-ts-c3" />
 
             <Header level={2}>Challenge 4</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by specifying that the function returns a Promise which resolves to a string. Hint: This was mentioned in the first link (video) in the TypeScript references. Feel free to use Google or ChatGPT!</Paragraph>
-            <CodeEditor id={4} height="300px" initialCode={challengeFourInitial} languages={['typescript']} saveCode="intro-ts-c4" />
+            <CodeEditor id={4} height="300px" initialCode={challengeFourInitial} languages={['typescript']} saveKey="intro-ts-c4" />
 
             <Header level={2}>Challenge 5</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by typing the parameters and making the second parameter optional. Hint: Ask ChatGPT or Google if you can&apos;t figure it out.</Paragraph>
-            <CodeEditor id={5} height="300px" initialCode={challengeFiveInitial} languages={['typescript']} saveCode="intro-ts-c5" />
+            <CodeEditor id={5} height="300px" initialCode={challengeFiveInitial} languages={['typescript']} saveKey="intro-ts-c5" />
 
             <Pagination
                 previousLabel="Introduction to TypeScript"
