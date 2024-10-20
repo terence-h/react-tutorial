@@ -8,7 +8,7 @@ export default function KeyPointerOne() {
         <article id="key-pointer-one">
             <Header level={2}>1. Break Everything Down into Components</Header>
             <Paragraph>In traditional HTML/JavaScript, you typically write large blocks of HTML for different parts of your webpage. Some codes are repeated even if the behaviour is the same as shown below.</Paragraph>
-            <CodeBlock code={htmlCode} language={"html"} />
+            <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
             <Paragraph className="mt-5">In React, we break down these elements into <span className="underline">reusable components</span>. It&apos;s also highly recommended to adhere to <span className="underline">&quot;1 component, 1 responsibility&quot;</span>. Run the code and see what happens!</Paragraph>
             <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
         </article>

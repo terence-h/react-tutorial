@@ -42,7 +42,7 @@ export default function TSAdvantagesPage() {
                 <br />Auto completion is much more powerful in TypeScript as shown below because &quot;persons&quot; is initialised as the array type of Person interface.
             </Paragraph>
             <div className="mx-auto md:max-w-[90%] flex flex-col md:flex-row gap-y-2 md:gap-y-0">
-                <CodeBlock className={`md:w-1/3 mx-auto`} code={tsAdvAutoCompletionCode} language={"json"} />
+                <CodeBlock className={`md:w-1/3 mx-auto`} code={tsAdvAutoCompletionCode} language={"json"} allowCopy={false} />
                 <ImageContainer src={tsAdvAutoCompletion1} className={`md:w-[45%] mx-auto`} alt='Code' />
             </div>
         </article>

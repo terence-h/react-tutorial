@@ -1,14 +1,16 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus, vs, dracula, xonokai } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useLocalStorage } from '../contexts/LocalStorageContext';
+import { CheckCircleIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 interface CodeBlockProps {
     code: string;
     language: string;
     showLineNumbers?: boolean
+    allowCopy?: boolean
     className?: string
 }
 /**
@@ -20,9 +22,20 @@ interface CodeBlockProps {
  * @example
  * <CodeBlock code={"console.log('abc')"} language={"javascript"} />
  */
-export default function CodeBlock({ code, language, showLineNumbers = true, className }: CodeBlockProps) {
+export default function CodeBlock({ code, language, showLineNumbers = true, allowCopy = true, className }: CodeBlockProps) {
     const { getItem } = useLocalStorage();
     const theme = getItem('codeTheme') as 'vscode-dark' | 'vscode-light' | 'dracula' | 'monokai';
+    const [isCopied, setIsCopied] = useState<boolean>(false);
+
+    const handleCopy = async () => {
+        try {
+            await navigator.clipboard.writeText(code);
+            setIsCopied(true);
+            setTimeout(() => setIsCopied(false), 2000); // Reset after 2 seconds
+        } catch (err) {
+            console.error('Failed to copy!', err);
+        }
+    };
 
     function getThemeExtension() {
         switch (theme) {
@@ -41,7 +54,7 @@ export default function CodeBlock({ code, language, showLineNumbers = true, clas
 
     return (
         // dark:bg-slate-700 rounded-lg p-3
-        <div className={`w-full overflow-x-auto ${className}`}>
+        <div className={`w-full overflow-x-auto ${allowCopy && `relative`} ${className}`}>
             <SyntaxHighlighter
                 language={language}
                 style={getThemeExtension()}
@@ -57,6 +70,19 @@ export default function CodeBlock({ code, language, showLineNumbers = true, clas
             >
                 {code}
             </SyntaxHighlighter>
+            {allowCopy &&
+                <button
+                    onClick={handleCopy}
+                    className={`absolute top-2 right-2 bg-slate-600/50 text-white p-2 rounded-md hover:bg-slate-600 transition-opacity`}
+                    aria-label="Copy code to clipboard"
+                >
+                    {isCopied ? (
+                        <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                    ) : (
+                        <ClipboardIcon className="w-5 h-5" />
+                    )}
+                </button>
+            }
         </div>
     );
 }

@@ -62,7 +62,7 @@ const pages: Category[] = [
         id: 6,
         name: "Building Functional Components",
         subCategories: [
-            { id: 51, name: "Temp", link: "/tutorials/building-functional-components" },
+            { id: 51, name: "Adding a Header and Paragraph", link: "/tutorials/building-functional-components#adding-header-paragraph" },
         ]
     },
 ];
