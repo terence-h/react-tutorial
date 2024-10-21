@@ -106,6 +106,15 @@ const pages: Category[] = [
             { id: 103, name: "Practice: Side Effects with useEffect", link: "/practices/side-effects" },
         ]
     },
+    {
+        id: 11,
+        name: "Managing Complex States with Context API",
+        subCategories: [
+            { id: 111, name: "Introduction to Context API", link: "/tutorials/managing-complex-states#introduction" },
+            { id: 112, name: "Create a Dark Mode Context Provider", link: "/tutorials/managing-complex-states#create-dark-mode-context" },
+            { id: 113, name: "Practice: Managing Complex States with Context API", link: "/practices/managing-complex-states" },
+        ]
+    },
 ];
 
 export default pages;

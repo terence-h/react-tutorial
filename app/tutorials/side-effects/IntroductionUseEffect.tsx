@@ -1,4 +1,5 @@
 import Header from "@/app/components/Header";
+import InformationText from "@/app/components/InformationText";
 import NestedList, { ListItem } from "@/app/components/NestedList";
 import Paragraph from "@/app/components/Paragraph";
 import Table, { TableRow } from "@/app/components/Table";
@@ -8,10 +9,9 @@ export default function IntroductionUseEffect() {
         <article id="introduction">
             <Header>Introduction to useEffect</Header>
 
-            <Paragraph>The useEffect hook allows you to manage side effects in components. Side effects include fetching data from an API, directly updating the DOM, and setting up timers or subscriptions like window event listeners. In this guide, you will learn how to use useEffect.
-                <br />< br />The useEffect hook runs side effects AFTER every render or when specific dependencies change depending on how you declare the dependencies.
-                <br />< br />It is essentially React&apos;s way of handling effects that would have been managed using lifecycle methods in class components (componentDidMount, componentDidUpdate, and componentWillUnmount). Here&apos;s a table to explain the 3 lifecycle methods.
-            </Paragraph>
+            <Paragraph>The useEffect hook allows you to manage side effects in components. Side effects include fetching data from an API, directly updating the DOM, and setting up timers or subscriptions like window event listeners. In this guide, you will learn how to use useEffect.</Paragraph>
+            <InformationText className="mt-5 mb-5">The useEffect hook runs side effects AFTER every render or when specific dependencies change depending on how you declare the dependencies.</InformationText>
+            <Paragraph>It is essentially React&apos;s way of handling effects that would have been managed using lifecycle methods in class components (componentDidMount, componentDidUpdate, and componentWillUnmount). Here&apos;s a table to explain the 3 lifecycle methods.</Paragraph>
 
             <Table headers={headers} data={data} />
         </article>

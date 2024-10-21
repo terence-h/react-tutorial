@@ -1,6 +1,7 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import CodeEditor from "@/app/components/CodeEditor";
 import Header from "@/app/components/Header";
+import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
 
 export default function RenderingDynamicContent() {
@@ -21,8 +22,7 @@ export default function RenderingDynamicContent() {
                 <br /><br />Here&apos;s how you properly render objects with dynamic sizes.
             </Paragraph>
             <CodeEditor id={2} initialCode={goodRenderCode} languages={["jsx", "tsx"]} />
-
-            <Paragraph className="mt-5">When you map over an array of items to render, React requires a unique &quot;key&quot; attribute for each item. This key attribute allows React to track changes efficiently. When an item is changed, removed or added, React will know this through the key attribute.</Paragraph>
+            <InformationText className="mt-5">When you map over an array of items to render, React requires a unique &quot;key&quot; attribute for each item. This key attribute allows React to track changes efficiently. When an item is changed, removed or added, React will know this through the key attribute.</InformationText>
         </article>
     );
 }

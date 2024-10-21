@@ -33,8 +33,8 @@ export default function Page() {
             <Pagination
                 previousLabel="Side Effects with useEffect"
                 previousPath="/tutorials/side-effects"
-                nextPath="/"
-                nextLabel="..." />
+                nextPath="/tutorials/managing-complex-states"
+                nextLabel="Managing Complex States with Context API" />
         </Section>
     );
 }

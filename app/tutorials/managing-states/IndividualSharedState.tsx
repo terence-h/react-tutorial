@@ -5,6 +5,7 @@ import AccordionItem from "@/app/components/AccordionItem";
 import CodeBlock from "@/app/components/CodeBlock";
 import CodeEditor from "@/app/components/CodeEditor";
 import Header from "@/app/components/Header";
+import InformationText from "@/app/components/InformationText";
 import NestedList, { ListItem } from "@/app/components/NestedList";
 import Paragraph from "@/app/components/Paragraph";
 
@@ -19,15 +20,13 @@ export default function IndividualSharedState() {
       <CodeEditor id={1} initialCode={useStateDupe} languages={["jsx", "tsx"]} />
 
       <Paragraph className="mt-5">Both text is changing! Can you guess why?
-        <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>.
-        <br /><br />Think first before you create the state. Does your state need to be used in other sibling components?</Paragraph>
-      <NestedList items={thinkFirstStateList} />
-
-      <Paragraph className="mt-5">With that said, can you try and separate the shared state into individual state to each ButtonWithCounter component? Use the code editor provided above.</Paragraph>
+        <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>.</Paragraph>
+      <InformationText className="mt-5 mb-5">Think first before you create the state. Does your state need to be used in other sibling components?<NestedList items={thinkFirstStateList} /></InformationText>
+      <Paragraph>With that said, can you try and separate the shared state into individual state to each ButtonWithCounter component? Use the code editor provided above.</Paragraph>
 
       <Accordion>
         <AccordionItem title={"Solution"}>
-          <Paragraph>By moving the state into the ButtonWithCounter component, a new state is created whenever it is used. The state is completely independent from other ButtonWithCounter components.</Paragraph>
+          <Paragraph>By moving the state into the ButtonWithCounter component, a new state is created whenever it is used. The state is completely independent from other ButtonWithCounter components.<NestedList items={thinkFirstStateList} /></Paragraph>
           <CodeBlock code={individualStateAnswer} language={"jsx"} />
         </AccordionItem>
       </Accordion>
