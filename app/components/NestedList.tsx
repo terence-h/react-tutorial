@@ -2,7 +2,8 @@ import React from 'react';
 
 interface NestedListProps {
     items: ListItem[];
-    level?: number
+    level?: number;
+    className?: string;
 }
 
 export interface ListItem {
@@ -118,11 +119,11 @@ function getPadddingLeft(level: number) {
 ];
 <NestedList items={data} />
  */
-export default function NestedList({ items, level = 1 }: NestedListProps) {
+export default function NestedList({ items, level = 1, className }: NestedListProps) {
     const paddingLeftClass = getPadddingLeft(level);
 
     return (
-        <ul className={`list-disc ${paddingLeftClass} space-y-1`}>
+        <ul className={`list-disc ${paddingLeftClass} space-y-1 ${className}`}>
             {items.map((item) => (
                 <li key={item.id}>
                     <span className={`${item.className || ''}`}>

@@ -102,6 +102,8 @@ const pages: Category[] = [
         name: "Side Effects with useEffect",
         subCategories: [
             { id: 101, name: "Introduction to useEffect", link: "/tutorials/side-effects#introduction" },
+            { id: 102, name: "Implementations of useEffect", link: "/tutorials/side-effects#implementations" },
+            { id: 103, name: "Practice: Side Effects with useEffect", link: "/practices/side-effects" },
         ]
     },
 ];
