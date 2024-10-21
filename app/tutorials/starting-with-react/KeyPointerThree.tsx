@@ -12,7 +12,7 @@ export default function KeyPointerThree() {
             <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
             
             <Paragraph className="mt-5">In React, we use <span className="underline">states</span> to track dynamic data. <span className="underline">We do not directly manipulate the DOM in most cases</span> but we &quot;tell&quot; React to update the DOM when we make changes to a state. Run the code and see what happens!</Paragraph>
-            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} />
         </article>
     );
 }

@@ -25,7 +25,7 @@ export default function Page() {
 
             <Header level={2}>Challenge 2</Header>
             <Paragraph>Using your answer in Challenge 1, add a dropdown select list that allows the user to select their preferred programming langauge (JavaScript or TypeScript).
-                <br/><br/>Add a submit button. When the user submits, prevent the default behaviour and trigger an alert message displaying the username, password and preferred langauge.
+                <br /><br />Add a submit button. When the user submits, prevent the default behaviour and trigger an alert message displaying the username, password and preferred langauge.
                 <br /><br />Your output should look something like this:
             </Paragraph>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
@@ -33,7 +33,7 @@ export default function Page() {
                     <ImageContainer src={ChallengeTwoOutputOne} alt={"Challenge 2 Output 1"} />
                 </div>
                 <div className="col-span-1">
-                    <ImageContainer src={ChallengeTwoOutputTwo} alt={"Chalenge 2 Output 2"} />
+                    <ImageContainer src={ChallengeTwoOutputTwo} alt={"Challenge 2 Output 2"} />
                 </div>
             </div>
             <CodeEditor id={1} initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveKey="managing-states-c2" />
@@ -41,7 +41,7 @@ export default function Page() {
             <Pagination
                 previousLabel="Managing States with useState"
                 previousPath="/tutorials/managing-states"
-                nextPath="/tutorials/rendering-conditionally-dynamically"
+                nextPath="/tutorials/rendering-conditionally-dynamic"
                 nextLabel="Rendering Conditionally and Dynamic Content" />
         </Section>
     );

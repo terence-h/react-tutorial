@@ -88,6 +88,22 @@ const pages: Category[] = [
             { id: 85, name: "Practice: Managing States with useState", link: "/practices/managing-states" },
         ]
     },
+    {
+        id: 9,
+        name: "Rendering Conditionally and Dynamic Content",
+        subCategories: [
+            { id: 91, name: "Conditional Rendering", link: "/tutorials/rendering-conditionally-dynamic#conditional-rendering" },
+            { id: 92, name: "Rendering Dynamic Content", link: "/tutorials/rendering-conditionally-dynamic#rendering-dynamic-content" },
+            { id: 93, name: "Practice: Rendering Conditionally and Dynamic Content", link: "/practices/rendering-conditionally-dynamic" },
+        ]
+    },
+    {
+        id: 10,
+        name: "Side Effects with useEffect",
+        subCategories: [
+            { id: 101, name: "Introduction to useEffect", link: "/tutorials/side-effects#introduction" },
+        ]
+    },
 ];
 
 export default pages;

@@ -12,7 +12,7 @@ export default function KeyPointerTwo() {
             <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
             
             <Paragraph className="mt-5">In React, we pass data called <span className="underline">&quot;props&quot;</span> to components, which then can be used in the component function itself. Run the code and see what happens!</Paragraph>
-            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} />
         </article>
     );
 }

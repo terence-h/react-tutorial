@@ -12,7 +12,7 @@ export default function KeyPointerOne() {
             <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
 
             <Paragraph className="mt-5">In React, we break down these elements into <span className="underline">reusable components</span>. It&apos;s also highly recommended to adhere to <span className="underline">&quot;1 component, 1 responsibility&quot;</span>. Run the code and see what happens!</Paragraph>
-            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} />
         </article>
     );
 }

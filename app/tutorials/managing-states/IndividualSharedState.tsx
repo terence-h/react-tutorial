@@ -16,7 +16,7 @@ export default function IndividualSharedState() {
       <Paragraph>An individual state means that the state is only used by one component and no other components depend on it.
         <br />A shared state means that the state is used by multiple components.
         <br /><br />Using the code editor below, {"<ButtonWithCounter>"} has been duplicated in the App component. Click on any of the button and see what happens.</Paragraph>
-      <CodeEditor id={1} initialCode={useStateDupe} languages={["jsx", "tsx"]} readOnly={false} />
+      <CodeEditor id={1} initialCode={useStateDupe} languages={["jsx", "tsx"]} />
 
       <Paragraph className="mt-5">Both text is changing! Can you guess why?
         <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>.

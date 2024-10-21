@@ -12,7 +12,7 @@ export default function KeyPointerFive() {
             <CodeBlock code={htmlCode} language={"html"} allowCopy={false} />
             
             <Paragraph className="mt-5">As mentioned earlier in key point 3, we describe what the UI will look like and let React update the UI. Run the code and see what happens!</Paragraph>
-            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} readOnly={true} />
+            <CodeEditor id={1} languages={['jsx']} initialCode={reactCode} />
         </article>
     );
 }
