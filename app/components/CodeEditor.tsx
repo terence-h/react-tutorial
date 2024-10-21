@@ -241,7 +241,7 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
     }
 
     return (
-        <>
+        <div>
             <div className="flex flex-row items-center justify-between md:justify-normal md:space-x-4 mb-4">
                 <select
                     className="bg-background border border-gray-300 rounded px-2 py-1 md:px-3 md:py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -302,6 +302,6 @@ export default function CodeEditor({ id, languages, initialCode = "// Write your
                     <ErrorBoundary id={id}><div className='border-2 dark:bg-foreground dark:text-background border-black'>{output}</div></ErrorBoundary>
                 )}
             </div>
-        </>
+        </div>
     );
 }

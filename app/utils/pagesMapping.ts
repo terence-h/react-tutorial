@@ -84,6 +84,8 @@ const pages: Category[] = [
             { id: 81, name: "Introduction to useState", link: "/tutorials/managing-states#introduction" },
             { id: 82, name: "Creating State", link: "/tutorials/managing-states#creating-a-state" },
             { id: 83, name: "Individual & Shared States", link: "/tutorials/managing-states#individual-shared-states" },
+            { id: 84, name: "Working with Forms", link: "/tutorials/managing-states#working-with-forms" },
+            { id: 85, name: "Practice: Managing States with useState", link: "/practices/managing-states" },
         ]
     },
 ];

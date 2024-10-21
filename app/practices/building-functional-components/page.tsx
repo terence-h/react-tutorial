@@ -10,11 +10,10 @@ export default function Page() {
         <Section id="building-functional-components">
             <Header>Practice: Building Functional Components</Header>
 
-            <InformationText>The code changes in the practices section are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
 
             <Header level={2}>Challenge 1</Header>
-            <Paragraph>You are now asked to create a Paragraph component. The Paragraph component must be able to take in the style property and be able to change the text. Paragraph styling: text-decoration: &quot;underline dotted&quot;
-            </Paragraph>
+            <Paragraph>You are now asked to create a Paragraph component. The Paragraph component must be able to take in the style property and be able to change the text. Paragraph styling: text-decoration: &quot;underline dotted&quot;</Paragraph>
             <CodeEditor id={1} initialCode={challengeOneInitial} languages={['jsx', 'tsx']} saveKey="building-fc-c1" />
 
             <Header level={2}>Challenge 2</Header>
