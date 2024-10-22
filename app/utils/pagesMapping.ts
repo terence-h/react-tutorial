@@ -135,6 +135,7 @@ const pages: Category[] = [
             { id: 133, name: "Creating Simple Routes", link: "/tutorials/routing#creating-simple-routes" },
             { id: 134, name: "Creating Dynamic Routes", link: "/tutorials/routing#creating-dynamic-routes" },
             { id: 135, name: "Handling 404 Pages", link: "/tutorials/routing#handling-404-pages" },
+            { id: 136, name: "Redirecting User to Another Page", link: "/tutorials/routing#redirecting" },
         ]
     },
     {

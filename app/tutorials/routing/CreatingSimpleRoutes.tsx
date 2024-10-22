@@ -12,9 +12,9 @@ export default function CreatingSimpleRoutes() {
 
             <Paragraph>To install the react-router-dom library, stop the server if you haven&apos;t done so and run this command to install the package:
                 <br /><code>npm install react-router-dom</code>
+                <br /><br />The project structure that we will be using will include a &quot;pages&quot; folder that will contain all the routes we have in the project.
             </Paragraph>
-
-            <Paragraph>The project structure that we will be using will include a &quot;pages&quot; folder that will contain all the routes we have in the project.</Paragraph>
+            
             <ImageContainer className="mt-5 mb-5 md:w-1/2" src={ProjectStructure} alt={"VSCode Project Structure"} />
 
             <Paragraph>In the root of the web app (typically App.js/Page.js/Index.js), we will wrap the component with the router. For this tutorial, we are using BrowserRouter.</Paragraph>

@@ -5,8 +5,10 @@ import ReactRouterDom from "./ReactRouterDom";
 import CreatingSimpleRoutes from "./CreatingSimpleRoutes";
 import CreatingDynamicRoutes from "./CreatingDynamicRoutes";
 import Handling404Pages from "./Handling404Pages";
-// import LearnMore from "@/app/components/LearnMore";
-// import Hyperlink from "@/app/components/Hyperlink";
+import Redirecting from "./Redirecting";
+import LazyLoading from "./LazyLoading";
+import LearnMore from "@/app/components/LearnMore";
+import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
@@ -16,7 +18,9 @@ export default function Page() {
             <CreatingSimpleRoutes />
             <CreatingDynamicRoutes />
             <Handling404Pages />
-            {/* <LearnMore references={references} /> */}
+            <Redirecting />
+            <LazyLoading />
+            <LearnMore references={references} />
             <Pagination
                 previousLabel="Practice: Building Reusable Custom Hooks"
                 previousPath="/practices/building-reusable-custom-hooks"
@@ -26,9 +30,13 @@ export default function Page() {
     );
 }
 
-// const references = [
-//     {
-//         id: 1,
-//         label: (<Hyperlink href="https://react.dev/learn/reusing-logic-with-custom-hooks">Reusing Logic with Custom Hooks - React.dev</Hyperlink>)
-//     },
-// ];
+const references = [
+    {
+        id: 1,
+        label: (<Hyperlink href="https://reactrouter.com/en/main">Guides - reactrouter.com</Hyperlink>)
+    },
+    {
+        id: 2,
+        label: (<Hyperlink href="https://www.youtube.com/watch?v=SMq1IQRweDc">Learn React Router v6 - Full Course - youtube.com</Hyperlink>)
+    },
+];

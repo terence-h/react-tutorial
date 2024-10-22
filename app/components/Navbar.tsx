@@ -71,16 +71,38 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                     {/* Navbar Header */}
                     <div className="flex items-center justify-between p-4 bg-gray-300 dark:bg-gray-900">
                         <Link href="/" className="text-lg font-semibold">
-                            React Learning Guide
+                            React Learning Guide <span className='text-xs'>v1.0.0</span>
                         </Link>
-                        {/* Close button for mobile */}
-                        <button
-                            onClick={toggleNavbar}
-                            className="focus:outline-none"
-                            aria-label="Close Menu"
-                        >
-                            <XMarkIcon className="h-6 w-6" />
-                        </button>
+
+                        <div className='flex gap-3 md:gap-1'>
+                            {/* Dark Mode Toggle */}
+                            <div className="p-0">
+                                <button
+                                    onClick={toggleDarkMode}
+                                    className="p-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded focus:outline-none"
+                                >
+                                    {isDarkMode || isDarkMode === undefined ? (
+                                        // mr-3
+                                        <>
+                                            <MoonIcon className="h-6 w-6" />
+                                            {/* <span>Switch to Light Mode</span> */}
+                                        </>
+                                    ) : (
+                                        <>
+                                            <SunIcon className="h-6 w-6" />
+                                            {/* <span>Switch to Dark Mode</span> */}
+                                        </>
+                                    )}
+                                </button>
+                            </div>
+                            <button
+                                onClick={toggleNavbar}
+                                className="p-2 hover:bg-gray-400 dark:hover:bg-gray-700 rounded focus:outline-none"
+                                aria-label="Close Menu"
+                            >
+                                <XMarkIcon className="h-6 w-6" />
+                            </button>
+                        </div>
                     </div>
 
                     {/* Navigation Links */}
@@ -138,30 +160,6 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                             ))}
                         </ul>
                     </nav>
-
-                    {/* Dark Mode Toggle */}
-                    <div className="p-4">
-                        <button
-                            onClick={toggleDarkMode}
-                            className="flex items-center w-full p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded focus:outline-none"
-                        >
-                            {isDarkMode || isDarkMode === undefined ? (
-                                <>
-                                    <MoonIcon className="h-5 w-5 mr-3" />
-                                    <span>Switch to Light Mode</span>
-                                </>
-                            ) : (
-                                <>
-                                    <SunIcon className="h-5 w-5 mr-3" />
-                                    <span>Switch to Dark Mode</span>
-                                </>
-                            )}
-                        </button>
-                    </div>
-                    {/* Version No. */}
-                    <div className="pb-2 pr-2 text-end text-xs">
-                        Version 1.0.0
-                    </div>
                 </div>
             </div>
 
