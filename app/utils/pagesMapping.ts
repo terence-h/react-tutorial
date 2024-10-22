@@ -131,6 +131,10 @@ const pages: Category[] = [
         name: "Routing for Apps with Multiple Pages",
         subCategories: [
             { id: 131, name: "Introduction to Routing in React", link: "/tutorials/routing" },
+            { id: 132, name: "What is react-router-dom?", link: "/tutorials/routing#react-router-dom" },
+            { id: 133, name: "Creating Simple Routes", link: "/tutorials/routing#creating-simple-routes" },
+            { id: 134, name: "Creating Dynamic Routes", link: "/tutorials/routing#creating-dynamic-routes" },
+            { id: 135, name: "Handling 404 Pages", link: "/tutorials/routing#handling-404-pages" },
         ]
     },
 ];
