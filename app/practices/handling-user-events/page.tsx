@@ -7,7 +7,7 @@ import Pagination from "@/app/components/Pagination";
 
 export default function Page() {
     return (
-        <Section id="handling-user-events">
+        <Section>
             <Header>Practice: Handling User Events</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>

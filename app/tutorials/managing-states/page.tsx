@@ -9,7 +9,7 @@ import WorkingWithForms from "./WorkingWithForms";
 
 export default function Page() {
     return (
-        <Section id="managing-states">
+        <Section>
             <IntroductionStates />
             <CreatingState />
             <IndividualSharedState />

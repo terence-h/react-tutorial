@@ -17,11 +17,11 @@ export default function WorkingWithForms() {
             <div className="flex flex-wrap md:grid md:grid-cols-2 gap-5">
                 <div className="md:col-span-1">
                     <Header level={2}>Controlled Form</Header>
-                    <CodeEditor id={1} initialCode={controlledFormExample} languages={["jsx", "tsx"]} height="600px" />
+                    <CodeEditor id={1} initialCode={controlledFormExample} languages={["jsx", "tsx"]} height="500px" />
                 </div>
                 <div className="md:col-span-1">
                     <Header level={2}>Uncontrolled Form</Header>
-                    <CodeEditor id={2} initialCode={uncontrolledFormExample} languages={["jsx", "tsx"]} height="600px" />
+                    <CodeEditor id={2} initialCode={uncontrolledFormExample} languages={["jsx", "tsx"]} height="500px" />
                 </div>
             </div>
 

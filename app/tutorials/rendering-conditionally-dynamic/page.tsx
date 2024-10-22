@@ -7,7 +7,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="rendering-conditionally-dynamic">
+        <Section>
             <ConditionalRendering />
             <RenderingDynamicContent />
             <LearnMore references={references} />

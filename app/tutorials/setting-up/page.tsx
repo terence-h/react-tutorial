@@ -6,7 +6,7 @@ import CreateReactApp from "./CreateReactApp";
 
 export default function Page() {
     return (
-        <Section id="setting-up">
+        <Section>
             <DownloadTools />
             <SetupNVM />
             <CreateReactApp />

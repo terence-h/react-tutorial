@@ -7,7 +7,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="side-effects">
+        <Section>
             <IntroductionUseEffect />
             <ImplementationsUseEffect />
             <LearnMore references={references} />

@@ -10,7 +10,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="starting-with-react">
+        <Section>
             <KeyPointerOne />
             <KeyPointerTwo />
             <KeyPointerThree />

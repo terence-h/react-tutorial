@@ -6,7 +6,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="handling-user-events">
+        <Section>
             <AddingOnClick />
             <LearnMore references={references} />
             <Pagination

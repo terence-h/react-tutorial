@@ -11,7 +11,7 @@ import ChallengeTwoOutputTwo from "@/public/practices/managing-states/c2_expecte
 
 export default function Page() {
     return (
-        <Section id="managing-states">
+        <Section>
             <Header>Practice: Managing States with useState</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>

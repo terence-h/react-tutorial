@@ -115,6 +115,15 @@ const pages: Category[] = [
             { id: 113, name: "Practice: Managing Complex States with Context API", link: "/practices/managing-complex-states" },
         ]
     },
+    {
+        id: 12,
+        name: "Building Reusable Custom Hooks",
+        subCategories: [
+            { id: 121, name: "Introduction to Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#introduction" },
+            { id: 122, name: "Differences between Context API and Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#differences" },
+            { id: 123, name: "Use Cases of Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#use-cases" },
+        ]
+    },
 ];
 
 export default pages;

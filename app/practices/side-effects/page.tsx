@@ -11,7 +11,7 @@ import ChallengeTwoOutput from "@/public/practices/side-effects/c2_expected_outp
 
 export default function Page() {
     return (
-        <Section id="side-effects">
+        <Section>
             <Header>Practice: Side Effects with useEffect</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>

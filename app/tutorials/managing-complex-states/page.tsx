@@ -7,7 +7,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="managing-complex-states">
+        <Section>
             <IntroductionContextAPI />
             <CreatingDarkMode />
             <LearnMore references={references} />

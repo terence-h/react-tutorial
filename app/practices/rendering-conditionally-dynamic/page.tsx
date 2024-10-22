@@ -12,7 +12,7 @@ import NestedList, { ListItem } from "@/app/components/NestedList";
 
 export default function Page() {
     return (
-        <Section id="rendering-conditionally-dynamic">
+        <Section>
             <Header>Practice: Rendering Conditionally and Dynamic Content</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>

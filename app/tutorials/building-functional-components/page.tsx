@@ -9,7 +9,7 @@ import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
-        <Section id="building-functional-components">
+        <Section>
             <AddingAHeaderAndParagraph />
             <BreakingSeparateComponents />
             <PassingProps />

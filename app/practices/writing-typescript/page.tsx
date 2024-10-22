@@ -7,7 +7,7 @@ import Pagination from "@/app/components/Pagination";
 
 export default function Page() {
     return (
-        <Section id="writing-typescript">
+        <Section>
             <Header>Practice: Writing TypeScript</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!

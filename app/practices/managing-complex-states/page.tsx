@@ -10,7 +10,7 @@ import ChallengeOneOutputTwo from "@/public/practices/managing-complex-states/c1
 
 export default function Page() {
     return (
-        <Section id="managing-complex-states">
+        <Section>
             <Header>Practice: Managing Complex States with Context API</Header>
 
             <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
@@ -32,8 +32,8 @@ export default function Page() {
             <Pagination
                 previousLabel="Managing Complex States with Context API"
                 previousPath="/tutorials/managing-complex-states"
-                nextPath="/"
-                nextLabel="..." />
+                nextPath="/tutorials/building-reusable-custom-hooks"
+                nextLabel="Building Reusable Custom Hooks" />
         </Section>
     );
 }

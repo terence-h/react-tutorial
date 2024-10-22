@@ -6,7 +6,7 @@ import Pagination from "@/app/components/Pagination";
 
 export default function Page() {
     return (
-        <Section id="introduction">
+        <Section>
             <LearningOutcomes />
             <LearningPlan />
             <Prerequisites />
