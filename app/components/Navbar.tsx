@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import {
-    Bars3Icon,
-    XMarkIcon,
-    SunIcon,
-    MoonIcon,
-} from '@heroicons/react/24/outline';
+import { XMarkIcon, SunIcon, MoonIcon, } from '@heroicons/react/24/outline';
+import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import pages from '../utils/pagesMapping';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -49,17 +45,17 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
 
     return (
         <>
-            {/* Mobile Navbar */}
-            <div className="fixed flex mb-6 md:mb-0 h-12 w-12 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-[49] left-[43.2%] md:top-5 md:left-5 md:px-4"
+            {/* Navbar Icons */}
+            <div className="fixed flex mb-6 md:mb-0 h-12 w-12 cursor-pointer md:h-16 md:w-auto rounded-full bg-gray-300/75 dark:bg-gray-700/75 md:bg-transparent dark:md:bg-transparent items-center justify-center bottom-0 z-[49] left-[43.2%] md:top-[46%] md:left-5 md:px-4"
                 onClick={toggleNavbar}>
                 <div>
-                    {isNavbarOpen ? (
+                    {/* {isNavbarOpen ? (
                         <XMarkIcon className="h-8 w-8 md:h-8 md:w-8" />
                     ) : (
-                        <Bars3Icon className="h-8 w-8 md:h-8 md:w-8" />
-                    )}
+                        <ChevronRightIcon className="h-8 w-8 md:h-8 md:w-8" />
+                    )} */}
+                    {!isNavbarOpen && <ChevronRightIcon className="h-8 w-8 md:h-8 md:w-8 md:hover:scale-125 transition duration-300" />}
                 </div>
-
             </div>
 
             {/* Sidebar */}
