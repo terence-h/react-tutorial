@@ -14,7 +14,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Side Effects with useEffect</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Add an useEffect hook to the existing code below to make sure the counter persists when you run the code again. Below are some hints to help you out.</Paragraph>

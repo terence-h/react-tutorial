@@ -10,7 +10,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Writing TypeScript</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph>
                 <br /><br />If you are an offline editor like VSCode, the file extension for TypeScript is .ts
             </InformationText>
             <Paragraph className="mt-5">You are given 5 JavaScript code snippets and asked to convert them to TypeScript.</Paragraph>

@@ -10,7 +10,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Building Functional Components</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>You are now asked to create a Paragraph component. The Paragraph component must be able to take in the style property and be able to change the text. Paragraph styling: text-decoration: &quot;underline dotted&quot;</Paragraph>

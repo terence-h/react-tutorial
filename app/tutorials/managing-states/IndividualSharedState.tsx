@@ -21,12 +21,12 @@ export default function IndividualSharedState() {
 
       <Paragraph className="mt-5">Both text is changing! Can you guess why?
         <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>.</Paragraph>
-      <InformationText className="mt-5 mb-5">Think first before you create the state. Does your state need to be used in other sibling components?<NestedList items={thinkFirstStateList} /></InformationText>
+      <InformationText className="mt-5 mb-5">{informationTextDiv}</InformationText>
       <Paragraph>With that said, can you try and separate the shared state into individual state to each ButtonWithCounter component? Use the code editor provided above.</Paragraph>
 
       <Accordion>
         <AccordionItem title={"Solution"}>
-          <Paragraph>By moving the state into the ButtonWithCounter component, a new state is created whenever it is used. The state is completely independent from other ButtonWithCounter components.<NestedList items={thinkFirstStateList} /></Paragraph>
+          <Paragraph>By moving the state into the ButtonWithCounter component, a new state is created whenever it is used. The state is completely independent from other ButtonWithCounter components.</Paragraph>
           <CodeBlock code={individualStateAnswer} language={"jsx"} />
         </AccordionItem>
       </Accordion>
@@ -44,6 +44,12 @@ const thinkFirstStateList: ListItem[] = [
     label: <span>If not, create the state in the component itself.</span>
   }
 ];
+
+const informationTextDiv =
+  <div>
+    <Paragraph>Think first before you create the state. Does your state need to be used in other sibling components?</Paragraph>
+    <NestedList items={thinkFirstStateList} />
+  </div>;
 
 const useStateDupe = `import { useState } from "react";
 

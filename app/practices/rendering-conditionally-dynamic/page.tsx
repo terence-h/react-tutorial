@@ -15,7 +15,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Rendering Conditionally and Dynamic Content</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>You are to render a list of todo list, The object provided in the code editor contains 2 done and 2 not done tasks. You are required to render ALL items of the todo list.

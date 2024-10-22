@@ -13,7 +13,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Managing Complex States with Context API</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Create a context provider that provides the value of whether the user is logged in or not. The login/logout button and paragraph component has been provided to you. The text displayed should be different when the user is logged in or logged out.

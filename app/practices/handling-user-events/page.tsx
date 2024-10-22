@@ -10,7 +10,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Handling User Events</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Create an onClick function for the button that sends an alert message. The function must take in a string parameter that determines the alert message.</Paragraph>

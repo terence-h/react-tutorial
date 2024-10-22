@@ -13,7 +13,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Building Reusable Custom Hooks</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Create a reusable custom hook named useWindowSize to allow components to reuse the state. The state value should hold an object containing the width of the window and the height of the window. Render the state values into the output.

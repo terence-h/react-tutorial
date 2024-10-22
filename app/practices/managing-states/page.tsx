@@ -14,7 +14,7 @@ export default function Page() {
         <Section>
             <Header>Practice: Managing States with useState</Header>
 
-            <InformationText>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</InformationText>
+            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph></InformationText>
 
             <Header level={2}>Challenge 1</Header>
             <Paragraph>Create a controlled form with inputs for &quot;Username&quot; and &quot;Password&quot;. Display a message under the form that updates in real-time as the user types, showing the username and password being entered.

@@ -5,19 +5,19 @@ import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
 
 export default function CreatingDarkMode() {
-    return (
-        <article id="create-dark-mode-context">
-            <Header>Creating a Dark Mode Context API</Header>
-            <Paragraph>Creating a context is fairly simple. It&apos;s like a function that wraps a state around and return context element with the children content.</Paragraph>
-            <CodeEditor id={1} initialCode={darkModeContextProvider} languages={["jsx", "tsx"]} height="500px" />
-            <InformationText className="mt-5">On a proper project environment, the createContext and ThemeProvider function would be in another file and you would export both of them as shown below.
-                <br /><code>export const ThemeContext = createContext(&apos;light&apos;)</code>
-                <br /><code>export default function ThemeProvider{"({ children })"}</code>
-            </InformationText>
-            <Paragraph className="mt-5">You can also nest context if you need to provide multiple global states as shown below.</Paragraph>
-            <CodeBlock code={nestedContext} language="jsx"/>
-        </article>
-    );
+  return (
+    <article id="create-dark-mode-context">
+      <Header>Creating a Dark Mode Context API</Header>
+      <Paragraph>Creating a context is fairly simple. It&apos;s like a function that wraps a state around and return context element with the children content.</Paragraph>
+      <CodeEditor id={1} initialCode={darkModeContextProvider} languages={["jsx", "tsx"]} height="500px" />
+      <InformationText className="mt-5"><Paragraph>On a proper project environment, the createContext and ThemeProvider function would be in another file and you would export both of them as shown below.
+        <br /><code>export const ThemeContext = createContext(&apos;light&apos;)</code>
+        <br /><code>export default function ThemeProvider{"({ children })"}</code></Paragraph>
+      </InformationText>
+      <Paragraph className="mt-5">You can also nest context if you need to provide multiple global states as shown below.</Paragraph>
+      <CodeBlock code={nestedContext} language="jsx" />
+    </article>
+  );
 }
 
 const nestedContext = `return (

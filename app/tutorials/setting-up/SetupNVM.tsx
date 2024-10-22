@@ -11,7 +11,7 @@ export default function SetupNVM() {
         <article id="setting-up-nvm">
             <Header>Setting up Node Version Manager (NVM)</Header>
 
-            <InformationText>DO NOT follow this if you are not using NVM</InformationText>
+            <InformationText><Paragraph>DO NOT follow this if you are not using NVM</Paragraph></InformationText>
 
             <Paragraph>Once NVM is installed, open Command Prompt and enter the command &quot;nvm&quot; to ensure that it is successfully installed.</Paragraph>
 

@@ -122,6 +122,15 @@ const pages: Category[] = [
             { id: 121, name: "Introduction to Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#introduction" },
             { id: 122, name: "Differences between Context API and Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#differences" },
             { id: 123, name: "Use Cases of Custom Hooks", link: "/tutorials/building-reusable-custom-hooks#use-cases" },
+            { id: 124, name: "Creating a Hook to Toggle True/False", link: "/tutorials/building-reusable-custom-hooks#creating-a-hook" },
+            { id: 125, name: "Practice: Building Reusable Custom Hooks", link: "/practices/building-reusable-custom-hooks" },
+        ]
+    },
+    {
+        id: 13,
+        name: "Routing for Apps with Multiple Pages",
+        subCategories: [
+            { id: 131, name: "Introduction to Routing in React", link: "/tutorials/routing" },
         ]
     },
 ];
