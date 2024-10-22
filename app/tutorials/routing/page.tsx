@@ -20,7 +20,7 @@ export default function Page() {
             <Pagination
                 previousLabel="Practice: Building Reusable Custom Hooks"
                 previousPath="/practices/building-reusable-custom-hooks"
-                nextPath="/tutorials/error-Boundaries"
+                nextPath="/tutorials/error-boundaries"
                 nextLabel="Error Boundaries" />
         </Section>
     );
