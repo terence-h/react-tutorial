@@ -143,6 +143,9 @@ const pages: Category[] = [
         name: "Error Boundaries",
         subCategories: [
             { id: 141, name: "Introduction to Error Boundaries", link: "/tutorials/error-boundaries#introduction" },
+            { id: 142, name: "Limitations of Error Boundaries", link: "/tutorials/error-boundaries#limitations" },
+            { id: 143, name: "Implementing an Error Boundary", link: "/tutorials/error-boundaries#implementation" },
+            { id: 144, name: "External Package (react-error-boundary)", link: "/tutorials/error-boundaries#external-package" },
         ]
     },
     {
