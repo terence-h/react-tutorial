@@ -15,6 +15,5 @@ export default function Home() {
         nextPath="/tutorials/introduction"
         nextLabel="Introduction" />
     </LoaderWrapper>
-
   );
 }

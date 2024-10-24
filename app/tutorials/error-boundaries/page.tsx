@@ -1,12 +1,20 @@
 import Section from "@/app/components/Section";
 import Pagination from "@/app/components/Pagination";
-// import LearnMore from "@/app/components/LearnMore";
-// import Hyperlink from "@/app/components/Hyperlink";
+import IntroductionErrorBoundaries from "./IntroductionErrorBoundaries";
+import LimitationsErrorBoundaries from "./LimitationsErrorBoundaries";
+import ImplementingErrorBoundaries from "./ImplementingErrorBoundaries";
+import ExternalPackagesErrorBoundaries from "./ExternalPackagesErrorBoundaries";
+import LearnMore from "@/app/components/LearnMore";
+import Hyperlink from "@/app/components/Hyperlink";
 
 export default function Page() {
     return (
         <Section>
-            {/* <LearnMore references={references} /> */}
+            <IntroductionErrorBoundaries />
+            <LimitationsErrorBoundaries />
+            <ImplementingErrorBoundaries />
+            <ExternalPackagesErrorBoundaries />
+            <LearnMore references={references} />
             <Pagination
                 previousLabel="Routing for Apps with Multiple Pages"
                 previousPath="/tutorials/routing"
@@ -16,9 +24,9 @@ export default function Page() {
     );
 }
 
-// const references = [
-//     {
-//         id: 1,
-//         label: (<Hyperlink href="https://react.dev/learn/reusing-logic-with-custom-hooks">Reusing Logic with Custom Hooks - React.dev</Hyperlink>)
-//     },
-// ];
+const references = [
+    {
+        id: 1,
+        label: (<Hyperlink href="https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary">Component (Catching Rendering Errors) - React.dev</Hyperlink>)
+    },
+];
