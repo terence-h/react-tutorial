@@ -1,5 +1,4 @@
 import CodeBlock from "@/app/components/CodeBlock";
-import CodeEditor from "@/app/components/CodeEditor";
 import Header from "@/app/components/Header";
 import Paragraph from "@/app/components/Paragraph";
 
