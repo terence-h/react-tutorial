@@ -7,6 +7,7 @@ import Pagination from "@/app/components/Pagination";
 import ImageContainer from "@/app/components/ImageContainer";
 import ChallengeOneOutputOne from "@/public/practices/managing-complex-states/c1_expected_output_1.jpg";
 import ChallengeOneOutputTwo from "@/public/practices/managing-complex-states/c1_expected_output_2.jpg";
+import Solutions from "./solutions";
 
 export default function Page() {
     return (
@@ -29,6 +30,8 @@ export default function Page() {
             </div>
             <CodeEditor id={1} initialCode={challengeOneInitial} languages={['jsx', 'tsx']} saveKey="managing-complex-states-c1" />
 
+            <Solutions />
+            
             <Pagination
                 previousLabel="Managing Complex States with Context API"
                 previousPath="/tutorials/managing-complex-states"
@@ -66,47 +69,3 @@ function LoginButton() {
 
 // Create your context here
 `;
-
-// C1 ANSWER
-// import { createContext, useContext, useState } from "react";
-
-// export default function App() {
-//   return (
-//     <AuthProvider>
-//       <LoginButton />
-//       <Paragraph />
-//     </AuthProvider>
-//   );
-// }
-
-// function Paragraph() {
-//   const { loggedIn } = useContext(AuthContext);
-//   return loggedIn ? <p>Welcome back, Alice.</p> : <p>You are not authorised to access this page.</p>
-// }
-
-// function LoginButton() {
-//   const { loggedIn, toggleLoggedIn } = useContext(AuthContext);
-//   return <button className="p-2 bg-blue-500 rounded-md" onClick={toggleLoggedIn}>{loggedIn ? "Logout" : "Login"}</button>
-// }
-
-// // Create a context.
-// const AuthContext = createContext(false);
-
-// // Context provider for the theme
-// function AuthProvider({ children }) {
-//   // A state to trigger a rerender when the user login or logout
-//   const [loggedIn, setLoggedIn] = useState(false);
-  
-//   function toggleLoggedIn() {
-//     setLoggedIn(!loggedIn);
-//   }
-//   return (
-//     // Wrap the theme context provider around the children content
-//     // Provide the values that we want to allow the children components to access
-//     // 1st parameter - state variable
-//     // 2nd parameter - toggleTheme function
-//     <AuthContext.Provider value={{ loggedIn, toggleLoggedIn }}>
-//       {children}
-//     </AuthContext.Provider>
-//   );
-// }

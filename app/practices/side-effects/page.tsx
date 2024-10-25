@@ -8,6 +8,7 @@ import NestedList, { ListItem } from "@/app/components/NestedList";
 import ImageContainer from "@/app/components/ImageContainer";
 import ChallengeOneOutput from "@/public/practices/side-effects/c1_expected_output.jpg";
 import ChallengeTwoOutput from "@/public/practices/side-effects/c2_expected_output.jpg";
+import Solutions from "./solutions";
 
 export default function Page() {
     return (
@@ -29,6 +30,8 @@ export default function Page() {
             <Paragraph>Your output should look something like this:</Paragraph>
             <ImageContainer className="w-2/3 md:w-1/2 mb-5" src={ChallengeTwoOutput} alt={"Challenge 2 Output"} />
             <CodeEditor id={2} initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveKey="side-effects-c2" />
+
+            <Solutions />
 
             <Pagination
                 previousLabel="Side Effects with useEffect"
@@ -81,43 +84,3 @@ export default function App() {
 const challengeTwoInitial = `export default function App() {
 
 }`;
-
-// ANSWER TO C1
-// import { useState, useEffect } from "react";
-
-// export default function App() {
-//   const storedCount = window.localStorage.getItem("count")
-//   const [count, setCount] = useState(storedCount ? parseInt(storedCount) : 0);
-
-//   useEffect(() => {
-//     window.localStorage.setItem("count", count);
-//   }, [count])
-
-//   function handleClick() {
-//     setCount(count + 1);
-//   }
-  
-//   return (
-//     <>
-//       <p>Click counter: {count}</p>
-//       <button className="bg-blue-500 p-2" onClick={handleClick}>Increment count by 1</button>
-//     </>
-//   );
-// }
-
-// ANSWER TO C2
-// import { useState, useEffect } from "react";
-
-// export default function App() {
-//   const [seconds, setSeconds] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setSeconds((prev) => prev + 1);
-//     }, 1000);
-
-//     return () => clearInterval(interval); // Cleanup interval on unmount
-//   }, []); // Runs only once when the component mounts
-
-//   return <p>Timer: {seconds} seconds</p>
-// }

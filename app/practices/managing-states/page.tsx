@@ -8,6 +8,7 @@ import ImageContainer from "@/app/components/ImageContainer";
 import ChallengeOneOutput from "@/public/practices/managing-states/c1_expected_output.jpg";
 import ChallengeTwoOutputOne from "@/public/practices/managing-states/c2_expected_output_1.jpg";
 import ChallengeTwoOutputTwo from "@/public/practices/managing-states/c2_expected_output_2.jpg";
+import Solutions from "./solutions";
 
 export default function Page() {
     return (
@@ -38,6 +39,8 @@ export default function Page() {
             </div>
             <CodeEditor id={1} initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveKey="managing-states-c2" />
 
+            <Solutions />
+
             <Pagination
                 previousLabel="Managing States with useState"
                 previousPath="/tutorials/managing-states"
@@ -56,111 +59,3 @@ const challengeOneInitial = `export default function App() {
 }`;
 
 const challengeTwoInitial = `// Copy your Challenge 1 answer here`;
-
-// ANSWER FOR Q1
-// import { useState } from 'react';
-
-// export default function App() {
-//   const [formData, setFormData] = useState({ username: '', password: '' });
-
-//   function handleChange(event) {
-//     // Get the input name value and input current value
-//     const { name, value } = event.target;
-    
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   }
-
-//   return (
-//     <>
-//       <form>
-//         <label>
-//           Username:
-//           <input
-//             type="text"
-//             name="username"
-//             value={formData.username}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         <br />
-//         <label>
-//           Password:
-//           <input
-//             type="password"
-//             name="password"
-//             value={formData.password}
-//             onChange={handleChange}
-//           />
-//         </label>
-//       </form>
-//       <h1 className='mt-5'>Preview</h1>
-//       <p>Username: {formData.username}</p>
-//       <p>Password: {formData.password}</p>
-//     </>
-//   );
-// }
-
-// ANSWER FOR Q2
-// import { useState } from 'react';
-
-// export default function App() {
-//   const [formData, setFormData] = useState({ username: "", password: "", language: "JavaScript" });
-
-//   function handleChange(event) {
-//     // Get the input name value and input current value
-//     const { name, value } = event.target;
-    
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   }
-
-//   function handleSubmit(event) {
-//     event.preventDefault();
-//     alert(`Name: ${formData.username} | Password: ${formData.password} | Preferred Programming Language: ${formData.language}`);
-//   }
-
-//   return (
-//     <>
-//       <form onSubmit={handleSubmit}>
-//         <label>
-//           Username:
-//           <input
-//             type="text"
-//             name="username"
-//             value={formData.username}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         <br />
-//         <label>
-//           Password:
-//           <input
-//             type="password"
-//             name="password"
-//             value={formData.password}
-//             onChange={handleChange}
-//           />
-//         </label>
-//         <br />
-//         <label>
-//           Preferred Programming Language:
-//           <select name="language" value={formData.language} onChange={handleChange}>
-//             <option value="JavaScript">JavaScript</option>
-//             <option value="TypeScript">TypeScript</option>
-//           </select>
-//         </label>
-//         <br />
-//         <button className="bg-blue-500 p-2" type="submit">Submit</button>
-//       </form>
-//       <h1 className='mt-5'>Preview</h1>
-//       <p>Username: {formData.username}</p>
-//       <p>Password: {formData.password}</p>
-//       <p>Preferred Programming Language: {formData.language}</p>
-//     </>
-//   );
-// }

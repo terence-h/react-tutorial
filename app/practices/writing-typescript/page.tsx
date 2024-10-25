@@ -4,15 +4,19 @@ import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
 import Section from "../../components/Section";
 import Pagination from "@/app/components/Pagination";
+import Solutions from "./solutions";
 
 export default function Page() {
     return (
         <Section>
             <Header>Practice: Writing TypeScript</Header>
 
-            <InformationText><Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!</Paragraph>
-                <br /><br />If you are an offline editor like VSCode, the file extension for TypeScript is .ts
+            <InformationText>
+                <Paragraph>The code changes in the practice sections are saved into your browser locally so you do not have to finish in one go!
+                    <br /><br />If you are an offline editor like VSCode, the file extension for TypeScript is .ts
+                </Paragraph>
             </InformationText>
+            
             <Paragraph className="mt-5">You are given 5 JavaScript code snippets and asked to convert them to TypeScript.</Paragraph>
 
             <Header level={2}>Challenge 1</Header>
@@ -34,6 +38,8 @@ export default function Page() {
             <Header level={2}>Challenge 5</Header>
             <Paragraph>Convert the following JavaScript function to TypeScript by typing the parameters and making the second parameter optional. Hint: Ask ChatGPT or Google if you can&apos;t figure it out.</Paragraph>
             <CodeEditor id={5} initialCode={challengeFiveInitial} languages={['typescript']} saveKey="intro-ts-c5" />
+
+            <Solutions />
 
             <Pagination
                 previousLabel="Introduction to TypeScript"

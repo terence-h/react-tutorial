@@ -4,6 +4,7 @@ import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
 import Section from "../../components/Section";
 import Pagination from "@/app/components/Pagination";
+import Solutions from "./solutions";
 
 export default function Page() {
     return (
@@ -19,6 +20,8 @@ export default function Page() {
             <Header level={2}>Challenge 2</Header>
             <Paragraph>You are now tasked to create a Section component that wraps 3 different components (Header, Paragraph and Button) together. The new Section component must be able to style BOTH Header and Paragraph components. It must also be able to set BOTH Header and Paragraph text.</Paragraph>
             <CodeEditor id={2} initialCode={challengeTwoInitial} languages={['jsx', 'tsx']} saveKey="building-fc-c2" />
+
+            <Solutions />
 
             <Pagination
                 previousLabel="Building Functional Components"
