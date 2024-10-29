@@ -68,7 +68,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                     {/* Navbar Header */}
                     <div className="flex items-center justify-between p-4 bg-gray-300 dark:bg-gray-900">
                         <Link href="/" className="text-lg font-semibold">
-                            React Learning Guide <span className='text-xs'>{LatestVersionNo}</span>
+                            React Tutorial <span className='text-xs'>{LatestVersionNo}</span>
                         </Link>
 
                         <div className='flex gap-3 md:gap-1'>

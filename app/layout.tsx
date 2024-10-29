@@ -3,8 +3,8 @@ import "./globals.css";
 import LayoutWrapper from "./components/LayoutWrapper";
 
 export const metadata: Metadata = {
-  title: "React Learning Guide",
-  description: "Developed and Curated by Terence Hau",
+  title: "React Tutorial",
+  description: "Condensed curated tutorials for getting started in React",
 };
 
 export default function RootLayout({
