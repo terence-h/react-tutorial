@@ -1,5 +1,6 @@
 import CodeEditor from "@/app/components/CodeEditor";
 import Header from "@/app/components/Header";
+import InformationText from "@/app/components/InformationText";
 import Paragraph from "@/app/components/Paragraph";
 
 export default function ImplementationsUseEffect() {
@@ -8,7 +9,8 @@ export default function ImplementationsUseEffect() {
             <Header>Implmentations of useEffect</Header>
 
             <Header level={2}>Running useEffect every render</Header>
-            <Paragraph>The effect will run every time the App component renders. Be careful when using this implementation if you are setting state as this will set your state every time your component render.</Paragraph>
+            <Paragraph>The effect will run every time the App component renders.</Paragraph>
+            <InformationText className="mt-5 mb-5"><Paragraph>Be careful when using this implementation if you are setting state in the effect as this will set your state every time your component triggers a rerender.</Paragraph></InformationText>
             <CodeEditor id={1} initialCode={everyRender} languages={["jsx", "tsx"]} />
 
             <Header level={2}>Running useEffect once</Header>

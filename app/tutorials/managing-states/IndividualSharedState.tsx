@@ -20,9 +20,8 @@ export default function IndividualSharedState() {
       <CodeEditor id={1} initialCode={useStateDupe} languages={["jsx", "tsx"]} />
 
       <Paragraph className="mt-5">Both text is changing! Can you guess why?
-        <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>.</Paragraph>
+        <br /><br />The reason that both numbers are changing when either of the buttons are pressed is because <span className="underline">they are sharing the same state</span>. With that said, can you try and separate the shared state into individual state to each ButtonWithCounter component? Use the code editor provided above.</Paragraph>
       <InformationText className="mt-5 mb-5">{informationTextDiv}</InformationText>
-      <Paragraph>With that said, can you try and separate the shared state into individual state to each ButtonWithCounter component? Use the code editor provided above.</Paragraph>
 
       <Accordion>
         <AccordionItem title={"Solution"}>

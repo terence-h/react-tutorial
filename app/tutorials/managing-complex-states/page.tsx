@@ -4,11 +4,13 @@ import IntroductionContextAPI from "./IntroductionContextAPI";
 import CreatingDarkMode from "./CreatingDarkMode";
 import LearnMore from "@/app/components/LearnMore";
 import Hyperlink from "@/app/components/Hyperlink";
+import LimitationsContext from "./LimitationsContext";
 
 export default function Page() {
     return (
         <Section>
             <IntroductionContextAPI />
+            <LimitationsContext />
             <CreatingDarkMode />
             <LearnMore references={references} />
             <Pagination

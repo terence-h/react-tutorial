@@ -17,7 +17,7 @@ export default function CreatingVariants() {
 
 const creatingVariants = `import Header from "./Header";
 
-export default function HeaderWithRule({ style, children}) {
+export default function HeaderWithRule({ style, children }) {
   return (
     <>
       <Header style={style}>{children}</Header>

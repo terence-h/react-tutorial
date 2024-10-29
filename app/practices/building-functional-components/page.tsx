@@ -32,13 +32,33 @@ export default function Page() {
     );
 }
 
-const challengeOneInitial = `// Remember, any function outside of App are considered separate file/component.
+const challengeOneInitial = `// Remember, any function outside of App should be assumed as a separate file/component.
 export default function App() {
   
+}
+
+function Paragraph() {
+  // Paragraph style: textDecoration: "underline dotted"
 }`;
 
 const challengeTwoInitial = `// Hint: Since you need to have 2 text (header and paragraph), you can use 1 new prop
 // for the header text and children prop for the paragraph text.
 export default function App() {
+  
+}
+
+function Section() {
+  
+}
+
+function Header() {
+  
+}
+
+function Paragraph() {
+  
+}
+
+function Button() {
   
 }`;
