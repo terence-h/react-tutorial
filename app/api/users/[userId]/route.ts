@@ -12,8 +12,8 @@ const users: Record<string, User> = {
     '3': { name: 'Charlie', luckyNumber: 42 },
 };
 
-export async function GET(request: Request, { params }: { params: { userId: string } }) {
-    const { userId } = params;
+export async function GET(request: Request, { params }: { params: Promise<{ userId: string }> }) {
+    const { userId } = await params;
     
     const user = users[userId];
 
