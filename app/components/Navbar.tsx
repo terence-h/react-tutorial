@@ -5,6 +5,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import pages from '../utils/pagesMapping';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { LatestVersionNo } from '../utils/VersionNo';
 
 interface NavbarProps {
     isNavbarOpen: boolean;
@@ -67,7 +68,7 @@ export default function Navbar({ isNavbarOpen, toggleNavbar }: NavbarProps) {
                     {/* Navbar Header */}
                     <div className="flex items-center justify-between p-4 bg-gray-300 dark:bg-gray-900">
                         <Link href="/" className="text-lg font-semibold">
-                            React Learning Guide <span className='text-xs'>v1.0.0</span>
+                            React Learning Guide <span className='text-xs'>{LatestVersionNo}</span>
                         </Link>
 
                         <div className='flex gap-3 md:gap-1'>

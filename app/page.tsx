@@ -4,6 +4,7 @@ import LoaderWrapper from "./components/LoaderWrapper";
 import Pagination from "./components/Pagination";
 import Paragraph from "./components/Paragraph";
 import Table, { TableRow } from "./components/Table";
+import { LatestVersionNo } from "./utils/VersionNo";
 
 export default function Home() {
 
@@ -24,9 +25,8 @@ export default function Home() {
 const headers = ['Version No.', 'Updated On', 'Changes'];
 
 const data: TableRow[] = [
-  { 'Version No.': '1.0.0', 'Updated On': '28/10/2024', 'Changes': 'Initial release.' },
   {
-    'Version No.': '1.0.1', 'Updated On': '29/10/2024', 'Changes':
+    'Version No.': LatestVersionNo, 'Updated On': '29/10/2024', 'Changes':
       <>
         <Paragraph>Added version history to home page.</Paragraph>
         <Paragraph>Added more context to Individual vs Shared states.</Paragraph>
@@ -34,4 +34,5 @@ const data: TableRow[] = [
         <Paragraph>Fixed typos on certain sections.</Paragraph>
       </>
   },
+  { 'Version No.': '1.0.0', 'Updated On': '28/10/2024', 'Changes': 'Initial release.' },
 ];
