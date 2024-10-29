@@ -4,7 +4,6 @@ export interface User {
 }
 
 import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
 
 // Mock data for demonstration purposes
 const users: Record<string, User> = {
@@ -13,7 +12,7 @@ const users: Record<string, User> = {
     '3': { name: 'Charlie', luckyNumber: 42 },
 };
 
-export async function GET(request: NextRequest, { params }: { params: { userId: string } }) {
+export async function GET(request: Request, { params }: { params: { userId: string } }) {
     const { userId } = params;
     
     const user = users[userId];
